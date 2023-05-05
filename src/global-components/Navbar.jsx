@@ -4,7 +4,7 @@ import glimere from '../assets/glimere.svg'
 export default function Navbar() {
   return (
     <>
-    <div className="bg-transparent h-[80px] w-full absolute flex flex-row justify-between items-center px-[50px] z-[1]">
+    <div className="bg-transparent h-[80px] w-full absolute flex flex-row justify-between items-center px-[80px] z-[1]">
         <div className="">
         <img src={glimere} alt="" className='w-[80px]'/>
         </div>
