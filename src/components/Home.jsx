@@ -1,19 +1,21 @@
 import React from 'react'
 import Navbar from '../global-components/navbar'
 import landingImg from '../assets/glimere-landing.png'
-import * as THREE from 'three';
+// import * as THREE from 'three';
 import { useRef, useEffect } from 'react';
 import glimere from '../assets/glimere.svg'
 import glimerenew from '../assets/glimerenew.svg'
 import style from "../assets/style.jpg"
 import career1 from "../assets/career1.jpg"
-import career2 from "../assets/career2.jpg"
-import career3 from "../assets/career3.jpg"
 import career4 from "../assets/career4.jpg"
 import career5 from "../assets/career5.jpg"
-import career6 from "../assets/career6.jpg"
-import career7 from "../assets/career7.jpg"
 import career9 from "../assets/career9.jpg"
+import community from "../assets/community.png"
+import products from "../assets/products.png"
+import inclusive from "../assets/inclusive.jpg"
+
+
+
 
 
 
@@ -167,8 +169,84 @@ const countdownInterval = setInterval(function() {
 
           </div>
         </div>
-        <div className="h-[100vh] bg-[#ffe9b8] w-full px-[3rem] pt-[80px] relative flex flex-row">
+        <div className="h-[100vh] bg-[#63AA87] w-full relative flex flex-row">
+          <div className="flex-[1]">
+          <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
+            <div className="w-[90%] mb-[15px]">
+            <h1 className="text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Join a Thriving Fashion Community</h1>
+            </div>
+            <div className="w-[70%] ">
+            <h1 className="text-[13px] text-left text-white">Connect with like-minded individuals who share your passion for fashion. Collaborate with other creatives, exchange ideas, and share your work.</h1>
+            </div>
+          </div>
+          </div>
+          <div className="flex-[1.9] flex items-end">
+            <img src={community} alt="" className='w-full' />
+          </div>
+
         </div>
+
+        <div className="h-[100vh] bg-[#ffe9b8] w-full relative flex flex-row">
+        <div className="flex-[1] flex items-end">
+            <img src={products} alt="" className='h-full' />
+          </div>
+
+          <div className="flex-[1.3]">
+          <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
+            <div className="w-[90%] mb-[15px]">
+            <h1 className="text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Showcase Your Creativity and Skills</h1>
+            </div>
+            <div className="w-[70%] ">
+            <h1 className="text-[13px] text-left text-[#9d5c0d]">Showcase your unique style with a stunning portfolio that captures your essence and creativity, and sets you apart in the fashion industry.</h1>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div className="h-[100vh] bg-[#fff5ee] w-full relative flex flex-row">
+        <div className="flex-[1] flex items-end">
+            {/* <img src={inclusive} alt="" className='h-full' /> */}
+          </div>
+
+          {/* <div className="flex-[1.3]">
+          <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
+            <div className="w-[90%] mb-[15px]">
+            <h1 className="text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Showcase Your Creativity and Skills</h1>
+            </div>
+            <div className="w-[70%] ">
+            <h1 className="text-[13px] text-left text-[#9d5c0d]">Showcase your unique style with a stunning portfolio that captures your essence and creativity, and sets you apart in the fashion industry.</h1>
+            </div>
+          </div>
+          </div> */}
+
+        </div>
+
+
+        <div className="h-[100vh] bg-[#332f2d] w-full relative flex flex-row">
+        <div className="flex-[1] flex items-end">
+            <img src={inclusive} alt="" className='h-full' />
+          </div>
+
+          <div className="flex-[1.3]">
+          <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
+            <div className="w-[90%] mb-[15px]">
+            <h1 className="text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>We Value Inclusivity</h1>
+            </div>
+            <div className="w-[70%] ">
+            <h1 className="text-[13px] text-left text-[#cec1ba]">At Glimere, we value inclusivity and believe in creating a platform that welcomes everyone. We celebrate diversity and are committed to providing a safe and welcoming space for individuals from all walks of life.
+
+Our community is built on the foundation of respect and understanding, and we believe in creating a culture where everyone feels valued and empowered to express themselves freely and authentically.
+
+We encourage individuals to showcase their unique style and creativity, regardless of their race, gender, age, or background. Our goal is to create a community that embraces diversity and promotes inclusivity.
+
+Join us on Glimere to be a part of a community that values inclusivity and celebrates the beauty of our differences.</h1>
+            </div>
+          </div>
+          </div>
+
+        </div>
+
+
         <div className="h-[100vh] bg-[#fff5ee] w-full px-[4rem] relative flex flex-row">
           <div className="flex-[1] flex items-center">
             <div className="">
