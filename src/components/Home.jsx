@@ -6,6 +6,14 @@ import { useRef, useEffect } from 'react';
 import glimere from '../assets/glimere.svg'
 import glimerenew from '../assets/glimerenew.svg'
 import style from "../assets/style.jpg"
+import career1 from "../assets/career1.jpg"
+import career2 from "../assets/career2.jpg"
+import career3 from "../assets/career3.jpg"
+import career4 from "../assets/career4.jpg"
+import career5 from "../assets/career5.jpg"
+import career6 from "../assets/career6.jpg"
+import career7 from "../assets/career7.jpg"
+import career9 from "../assets/career9.jpg"
 
 
 
@@ -85,10 +93,10 @@ const countdownInterval = setInterval(function() {
 
           <div className="flex-[1] h-full flex flex-col justify-center">
             <div className="w-[90%] mb-[15px]">
-            <h1 className="text-[50px] text-left text-[#9d5c0d] font-semibold">Unleash Your Fashion Potential</h1>
+            <h1 className="text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Unleash Your Fashion Potential</h1>
             </div>
             <div className="w-[80%] mb-[15px]">
-            <h1 className="text-[30px] text-left text-[#9d5c0d]">Connect, Create, and Empower</h1>
+            <h1 className="text-[30px] text-left text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Connect, Create, and Empower</h1>
             </div>
             <div className="w-[70%] ">
             <h1 className="text-[13px] text-left text-[#9d5c0d]">Unlock the doors to your fashion dreams and join Glimere's community of creators and innovators. Connect with like-minded individuals, create stunning portfolios, and empower yourself with endless opportunities for growth and success.</h1>
@@ -107,29 +115,64 @@ const countdownInterval = setInterval(function() {
 
         <div className='flex-[1] overflow-hidden z-10 flex flex-col items-start py-[80px] pl-[4rem]'>
           
-            <h1 className="text-white font-semibold text-[35px]">Unleash Your Style</h1>
+            <h1 className="text-white font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Unleash Your Style</h1>
             <div className="w-[40%] mt-[20px] text-left">
             <p className="text-[#613e13]">Discover the fashion potential within you and let it shine</p>
             </div>
         </div>
           {/* <div className='absolute top-0 left-0 w-full h-full' ref={canvasRef} /> */}
         <div className="flex-[1] z-10 flex flex-col items-end justify-end py-[80px] pr-[4rem]">
-            <h1 className="text-white font-semibold text-[35px]">Express Yourself</h1>
+            <h1 className="text-white font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Express Yourself</h1>
             <div className="w-[40%] mt-[20px] text-right">
             <p className="text-[#613e13]">Make a statement with your unique style</p>
             </div>
         </div>
         </div>
-        <div className="h-[100vh] bg-[#fff5ee] w-full px-[3rem] pt-[80px] relative flex flex-row">
-          <div className="flex-[1]"></div>
-          <div className="flex-[1]"></div>
+        <div className="h-[100vh] bg-[#fff5ee] w-full relative flex flex-row-reverse">
+        <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
+            <div className="w-[90%] mb-[15px]">
+            <h1 className="text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Empower Yourself with Endless Opportunities</h1>
+            </div>
+            <div className="w-[70%] ">
+            <h1 className="text-[13px] text-left text-[#9d5c0d]">Unlock Limitless Career Opportunities with Glimere's job portal, featuring a wide range of positions in the fashion industry. From design to marketing, discover your dream job and take the next step in your career.</h1>
+            </div>
+          </div>
+          <div className="flex-[1] flex flex-col py-[70px] px-[150px]">
+            <div className="flex-[1] h-[30%] w-full bg-white rounded-tl-[150px] rounded-tr-[150px] overflow-hidden">
+              <img src={career1} alt="" className="w-full" />
+            </div>
+            <div className="flex-[1] h-[30%] flex flex-row">
+              <div className="w-full h-full bg-[#585123] flex-[1]  rounded-tl-[150px] relative overflow-hidden">
+                {/* <img src={career2} alt="" className="w-[500px] absolute" /> */}
+              </div>
+              <div className="w-full h-full bg-[#fdff92] flex-[1] rounded-tr-[150px] overflow-hidden">
+                {/* <img src={career3} alt="" className="w-full" /> */}
+              </div>
+              <div className="w-full h-full bg-white flex-[1] rounded-bl-[150px]  rounded-br-[150px] rounded-tr-[150px] rounded-tl-[150px] overflow-hidden">
+                <img src={career4} alt="" className="w-full" />
+              </div>
+            </div>
+            <div className="flex-[1] h-[30%] flex flex-row">
+              <div className="w-full h-full bg-white flex-[1]  rounded-bl-[150px]  rounded-br-[150px] overflow-hidden">
+                <img src={career5} alt="" className="w-full" />
+              </div>
+              <div className="w-full h-full bg-[#ed7534] flex-[1]  rounded-bl-[150px] overflow-hidden">
+                <img src={career9} alt="" className="w-full" />
+              </div>
+              <div className="w-full h-full bg-[#EEC170] flex-[1]  rounded-br-[150px] overflow-hidden">
+                {/* <img src={career7} alt="" className="w-full" /> */}
+              </div>
+            </div>
+              
+
+          </div>
         </div>
         <div className="h-[100vh] bg-[#ffe9b8] w-full px-[3rem] pt-[80px] relative flex flex-row">
         </div>
         <div className="h-[100vh] bg-[#fff5ee] w-full px-[4rem] relative flex flex-row">
           <div className="flex-[1] flex items-center">
             <div className="">
-              <h1 className="font-medium text-[70px] mb-[30px]">Ready to slay the fashion game?</h1>
+              <h1 className="font-medium text-[70px] mb-[30px]" style={{fontFamily: "Edensor"}}>Ready to slay the fashion game?</h1>
               <div className="w-[70%]">
                 <p className='text-[19px] mb-[30px]'>Get in line with Glimere's waitlist and join the fashion revolution!</p>
               </div>
@@ -203,10 +246,12 @@ const countdownInterval = setInterval(function() {
               
             </div>
 
-            <div className="flex-[1] flex flex-col justify-center items-center">
-              <div className=""></div>
-              <img src={glimerenew} alt="" className='w-[100px]'/>
-              <img src={glimere} alt="" className='w-[70px] mt-[30px]'/>
+            <div className="flex-[1] flex flex-col justify-center items-end px-[60px]">
+              <div className="flex flex-col justify-center items-center">
+                <img src={glimerenew} alt="" className='w-[100px]'/>
+                <img src={glimere} alt="" className='w-[70px] mt-[30px]'/>
+              </div>
+              
             </div>
           </div>
     </>
