@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'landingImg': "url('/src/assets/glimere-landing-mobile.jpg')"
+      }
+    },
   },
   plugins: [],
 }

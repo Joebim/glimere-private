@@ -97,55 +97,59 @@ const countdownInterval = setInterval(function() {
     <>
         <Navbar />
         
-        <div className='h-[100vh] bg-[#fff5ee] w-full px-[40px] sm:px-[4rem] pt-[80px] relative flex flex-row'>
+        <div className='h-[100vh] bg-[#fff5ee] w-full px-[40px] sm:px-[4rem] pt-[80px] relative flex flex-row items-center'>
 
           <div className="flex-[1] h-full flex flex-col justify-center">
             <div className="w-[90%] mb-[15px]">
-            <h1 className="text-[30px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Unleash Your Fashion Potential</h1>
+            <h1 className="text-[40px] sm:text-[60px] text-left text-[#9d5c0d] font-semibold mb-[40px]" style={{fontFamily: "Edensor"}}>Connect. Create. Empower.</h1>
             </div>
-            <div className="w-[80%] mb-[15px]">
-            <h1 className="text-[15px] sm:text-[30px] text-left text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Connect, Create, and Empower</h1>
-            </div>
+            {/* <div className="w-[80%] mb-[15px]">
+            <h1 className="text-[20px] sm:text-[30px] text-left text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Connect, Create, and Empower</h1>
+            </div> */}
             <div className="w-[70%] ">
-            <h1 className="text-[13px] text-left text-[#9d5c0d]">Unlock the doors to your fashion dreams and join Glimere's community of creators and innovators. Connect with like-minded individuals, create stunning portfolios, and empower yourself with endless opportunities for growth and success.</h1>
+            <h1 className="text-[13px] text-left text-[#9d5c0d]">Empower your fashion dreams with Glimere's platform, connecting you with like-minded individuals, creating stunning portfolios, and providing endless opportunities for growth and success - all in one place.</h1>
             </div>
           </div>
            
           
     
-          <div className="h-[500px] w-[500px] bg-[#ffe9b8] overflow-hidden rounded-full flex flex-col justify-end flex-[0.6] sm:flex-[1]">
-            <img src={landingImg} alt="" className='px-[30px] pt-[30px]' />
+          <div className="h-[500px] w-[500px] bg-[#ffe9b8] overflow-hidden rounded-full bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
+            <img src={landingImg} alt="" className='hidden sm:block px-[10px] pt-[10px] sm:px-[30px] sm:pt-[30px]' />
           </div>
       
         </div>
-        <div className="h-[100vh] bg-[#772f1a] w-full relative flex flex-row">
-          <img src={style} alt="" className='w-full absolute' />
 
-        <div className='flex-[1] overflow-hidden z-10 flex flex-col items-start py-[80px] pl-[4rem]'>
+        <div className="h-[100vh] bg-[#772f1a] w-full relative flex flex-col sm:flex-row">
+          <div className="bg-[#DDB9A3] w-full h-full flex sm:block items-center absolute">
+            <img src={style} alt="" className='w-full' />
+          </div>
+
+        <div className='flex-[1] overflow-hidden z-10 flex flex-col items-start py-[60px] sm:py-[80px] pl-[40px] sm:pl-[4rem]'>
           
-            <h1 className="text-white font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Unleash Your Style</h1>
-            <div className="w-[40%] mt-[20px] text-left">
+            <h1 className="text-white font-semibold text-[35px] sm:text-[40px]" style={{fontFamily: "Edensor"}}>Unleash Your Style</h1>
+            <div className="w-[70%] sm:w-[40%] mt-[20px] text-left">
             <p className="text-[#613e13]">Discover the fashion potential within you and let it shine</p>
             </div>
         </div>
           {/* <div className='absolute top-0 left-0 w-full h-full' ref={canvasRef} /> */}
-        <div className="flex-[1] z-10 flex flex-col items-end justify-end py-[80px] pr-[4rem]">
-            <h1 className="text-white font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Express Yourself</h1>
-            <div className="w-[40%] mt-[20px] text-right">
+        <div className="flex-[1] z-10 flex flex-col items-end justify-end py-[60px] sm:py-[80px] pr-[40px] sm:pr-[4rem]">
+            <h1 className="text-white font-semibold text-[35px] sm:text-[40px]" style={{fontFamily: "Edensor"}}>Express Yourself</h1>
+            <div className="w-[70%] sm:w-[40%] mt-[20px] text-right">
             <p className="text-[#613e13]">Make a statement with your unique style</p>
             </div>
         </div>
         </div>
-        <div className="h-[100vh] bg-[#fff5ee] w-full relative flex flex-row-reverse">
-        <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
-            <div className="w-[90%] mb-[15px]">
-            <h1 className="text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Empower Yourself with Endless Opportunities</h1>
+        <div className="h-[100vh] bg-[#fff5ee] w-full relative flex flex-col-reverse sm:flex-row-reverse">
+        <div className="flex-[1] h-full px-[40px] sm:pl-[4rem] pb-[40px] sm:pb-[0px] flex flex-col justify-center">
+            <div className="w-[100%] sm:w-[90%] mb-[15px]">
+            <h1 className="text-[35px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Empower Yourself with Endless Opportunities</h1>
             </div>
-            <div className="w-[70%] ">
+            <div className="w-[90%] sm:w-[70%] ">
             <h1 className="text-[13px] text-left text-[#9d5c0d]">Unlock Limitless Career Opportunities with Glimere's job portal, featuring a wide range of positions in the fashion industry. From design to marketing, discover your dream job and take the next step in your career.</h1>
             </div>
           </div>
-          <div className="flex-[1] flex flex-col p-[4rem]">
+          
+          <div className="flex-[1] h-[360px] sm:h-auto sm:flex-[1] flex flex-col p-[40px] sm:p-[4rem]">
             <div className="flex-[1] h-[30%] w-full bg-white rounded-tl-[150px] rounded-tr-[150px] overflow-hidden">
               <img src={career1} alt="" className="w-full" />
             </div>
@@ -175,32 +179,32 @@ const countdownInterval = setInterval(function() {
 
           </div>
         </div>
-        <div className="h-[100vh] bg-[#63AA87] w-full relative flex flex-row">
+        <div className="h-[100vh] bg-[#63AA87] w-full relative flex flex-col sm:flex-row">
           <div className="flex-[1]">
-          <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
-            <div className="w-[90%] mb-[15px]">
-            <h1 className="text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Join a Thriving Fashion Community</h1>
+          <div className="flex-[1] h-full px-[40px] sm:px-[4rem] flex flex-col justify-center">
+            <div className="w-[]sm:w-[90%] mb-[15px]">
+            <h1 className="text-[38px] sm:text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Join a Thriving Fashion Community</h1>
             </div>
-            <div className="w-[70%] ">
+            <div className="w-[90%] sm:w-[70%] ">
             <h1 className="text-[13px] text-left text-white">Connect with like-minded individuals who share your passion for fashion. Collaborate with other creatives, exchange ideas, and share your work.</h1>
             </div>
           </div>
           </div>
-          <div className="flex-[1.9] flex items-end">
+          <div className="flex-[0.6] sm:flex-[1.9] flex items-end">
             <img src={community} alt="" className='w-full' />
           </div>
 
         </div>
 
-        <div className="h-[100vh] bg-[#ffe9b8] w-full relative flex flex-row">
-        <div className="flex-[1] flex items-end">
-            <img src={products} alt="" className='h-full' />
+        <div className="h-[100vh] bg-[#ffe9b8] w-full relative flex flex-col sm:flex-row">
+          <div className="flex-[1] h-[380px] sm:h-auto flex justify-center sm:items-end absolute sm:relative w-full sm:w-auto">
+            <img src={products} alt="" className='h-full rotate-90 sm:rotate-0' />
           </div>
 
-          <div className="flex-[1.3]">
-          <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
+          <div className="flex-[1.3] mt-[300px] sm:mt-0">
+          <div className="h-full sm:pl-[4rem] px-[40px] flex flex-col justify-center">
             <div className="w-[90%] mb-[15px]">
-            <h1 className="text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Showcase Your Creativity and Skills</h1>
+            <h1 className="text-[38px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Showcase Your Creativity and Skills</h1>
             </div>
             <div className="w-[70%] ">
             <h1 className="text-[13px] text-left text-[#9d5c0d]">Showcase your unique style with a stunning portfolio that captures your essence and creativity, and sets you apart in the fashion industry.</h1>
@@ -211,16 +215,16 @@ const countdownInterval = setInterval(function() {
 
 
         <div className="h-[100vh] bg-[#332f2d] w-full relative flex flex-row-reverse">
-        <div className="flex-[1] flex items-end">
+        <div className="flex-[1] items-end hidden sm:flex">
             <img src={inclusive} alt="" className='h-full' />
           </div>
 
           <div className="flex-[1.3]">
-          <div className="flex-[1] h-full pl-[4rem] flex flex-col justify-center">
-            <div className="w-[90%] mb-[15px]">
+          <div className="flex-[1] h-full px-[40px] sm:pl-[4rem] flex flex-col justify-center">
+            <div className="w-full sm:w-[90%] mb-[15px]">
             <h1 className="text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>We Value Inclusivity</h1>
             </div>
-            <div className="w-[70%] ">
+            <div className="w-full sm:w-[70%] ">
             <h1 className="text-[13px] text-left text-[#cec1ba]">At Glimere, we believe in a platform that welcomes everyone. We celebrate diversity and are committed to providing a safe and welcoming space for individuals from all walks of life.
 
 Our community is built on the foundation of respect and understanding, and we believe in creating a culture where everyone feels valued and empowered to express themselves freely and authentically.
@@ -235,26 +239,25 @@ Join us on Glimere to be a part of a community that values inclusivity and celeb
         </div>
 
         <div className="h-[100vh] bg-[#ed7534] w-full relative flex flex-row">
-        <div className='flex-[1] overflow-hidden z-10 flex flex-col items-start py-[80px] pl-[4rem]'>
-          
-          <h1 className="text-[#ffe9b8] font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Explore the Glimere Experience</h1>
-          <div className="w-[80%] mt-[20px] text-left">
-          <p className="text-white">As a user-focused platform, Glimere is designed to make your fashion journey easy and enjoyable.</p>
+          <div className='flex-[1] overflow-hidden z-10 flex flex-col items-start py-[80px] pl-[4rem]'>
+            
+            <h1 className="text-[#ffe9b8] font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Explore the Glimere Experience</h1>
+            <div className="w-[80%] mt-[20px] text-left">
+            <p className="text-white">As a user-focused platform, Glimere is designed to make your fashion journey easy and enjoyable.</p>
+            </div>
           </div>
-      </div>
-      <div className="flex-[1] flex flex-col justify-end">
-        <img src={platform} alt="" className='w-full ' />
+          <div className="flex-[1] flex flex-col justify-end">
+            <img src={platform} alt="" className='w-full ' />
 
-      </div>
-
-        {/* <div className='absolute top-0 left-0 w-full h-full' ref={canvasRef} /> */}
-      <div className="flex-[1] z-10 flex flex-col items-end justify-end py-[80px] pr-[4rem]">
-          <h1 className="text-[#ffe9b8] font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Get the fashion feel</h1>
-          <div className="w-[80%] mt-[20px] text-right">
-          <p className="text-white">Our design philosophy at Glimere is to create a user-friendly platform with a touch of fashionable flair and a modern concept.</p>
           </div>
-      </div>
 
+            {/* <div className='absolute top-0 left-0 w-full h-full' ref={canvasRef} /> */}
+          <div className="flex-[1] z-10 flex flex-col items-end justify-end py-[80px] pr-[4rem]">
+              <h1 className="text-[#ffe9b8] font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Get the fashion feel</h1>
+              <div className="w-[80%] mt-[20px] text-right">
+              <p className="text-white">Our design philosophy at Glimere is to create a user-friendly platform with a touch of fashionable flair and a modern concept.</p>
+              </div>
+          </div>
         </div>
 
 
@@ -354,7 +357,7 @@ Join us on Glimere to be a part of a community that values inclusivity and celeb
             </div>
           </div>
           <div className="bg-[#772f1a] w-full h-[80px] border-t-[1px] border-[#ffe9b865] flex justify-center items-center">
-            <h1 className='text-[#ffe9b8]'>© 2023 Glimere. All Rights Reserved.</h1>   
+            <h1 className='text-[#ffe9b8] text-[12px]'>© 2023 Glimere. All Rights Reserved.</h1>   
           </div>
     </>
   )
