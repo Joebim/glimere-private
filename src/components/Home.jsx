@@ -1,8 +1,9 @@
 import React from 'react'
 import Navbar from '../global-components/navbar'
+import { Link } from 'react-router-dom';
 import landingImg from '../assets/glimere-landing.png'
 // import * as THREE from 'three';
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 import glimere from '../assets/glimere.svg'
 import glimerenew from '../assets/glimerenew.svg'
 import style from "../assets/style.jpg"
@@ -62,6 +63,13 @@ const countdownInterval = setInterval(function() {
   }
 }, 1000);
 
+  const elementRef = useRef(null);
+
+  const handleButtonClick = () => {
+    elementRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+
   // const scene = new THREE.Scene();
   // const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
   
@@ -95,7 +103,7 @@ const countdownInterval = setInterval(function() {
 
   return (
     <>
-        <Navbar />
+        <Navbar handleButtonClick={handleButtonClick}/>
         
         <div className='h-[100vh] bg-[#fff5ee] w-full px-[40px] sm:px-[4rem] pt-[80px] relative flex flex-row items-center'>
 
@@ -197,7 +205,7 @@ const countdownInterval = setInterval(function() {
         </div>
 
         <div className="h-[100vh] bg-[#ffe9b8] w-full relative flex flex-col sm:flex-row">
-          <div className="flex-[1] h-[380px] sm:h-auto flex justify-center sm:items-end absolute sm:relative w-full sm:w-auto">
+          <div className="flex-[1] h-[370px] sm:h-auto flex justify-center sm:items-end absolute sm:relative w-full sm:w-auto">
             <img src={products} alt="" className='h-full rotate-90 sm:rotate-0' />
           </div>
 
@@ -221,8 +229,8 @@ const countdownInterval = setInterval(function() {
 
           <div className="flex-[1.3]">
           <div className="flex-[1] h-full px-[40px] sm:pl-[4rem] flex flex-col justify-center">
-            <div className="w-full sm:w-[90%] mb-[15px]">
-            <h1 className="text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>We Value Inclusivity</h1>
+            <div className="w-full sm:w-[90%] mb-[40px]">
+            <h1 className="text-[38px] sm:text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>We Value Inclusivity</h1>
             </div>
             <div className="w-full sm:w-[70%] ">
             <h1 className="text-[13px] text-left text-[#cec1ba]">At Glimere, we believe in a platform that welcomes everyone. We celebrate diversity and are committed to providing a safe and welcoming space for individuals from all walks of life.
@@ -238,40 +246,43 @@ Join us on Glimere to be a part of a community that values inclusivity and celeb
 
         </div>
 
-        <div className="h-[100vh] bg-[#ed7534] w-full relative flex flex-row">
-          <div className='flex-[1] overflow-hidden z-10 flex flex-col items-start py-[80px] pl-[4rem]'>
+        <div className="h-[100vh] bg-[#ed7534] w-full relative flex flex-col sm:flex-row pb-[190px] sm:pb-0 pt-[40px]">
+          <div className='flex-[1] overflow-hidden z-10 flex flex-col items-start py-[0px] sm:py-[80px] px-[40px] sm:pl-[4rem]'>
             
-            <h1 className="text-[#ffe9b8] font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Explore the Glimere Experience</h1>
-            <div className="w-[80%] mt-[20px] text-left">
+            <h1 className="text-[#ffe9b8] font-semibold text-[35px] sm:text-[40px]" style={{fontFamily: "Edensor"}}>Explore the Glimere Experience</h1>
+            <div className="w-[90%] sm:w-[60%] mt-[20px] text-left">
             <p className="text-white">As a user-focused platform, Glimere is designed to make your fashion journey easy and enjoyable.</p>
             </div>
           </div>
-          <div className="flex-[1] flex flex-col justify-end">
+          <div className="flex-[1] flex flex-col px-[80px] sm:px-[35%] absolute  h-full  justify-end">
             <img src={platform} alt="" className='w-full ' />
 
           </div>
 
             {/* <div className='absolute top-0 left-0 w-full h-full' ref={canvasRef} /> */}
-          <div className="flex-[1] z-10 flex flex-col items-end justify-end py-[80px] pr-[4rem]">
-              <h1 className="text-[#ffe9b8] font-semibold text-[40px]" style={{fontFamily: "Edensor"}}>Get the fashion feel</h1>
-              <div className="w-[80%] mt-[20px] text-right">
+          <div className="flex-[1] z-10 flex flex-col text-left sm:text-right items-start sm:items-end justify-start sm:justify-end py-[0px] sm:py-[80px] px-[40px] sm:pr-[4rem]">
+              <h1 className="text-[#ffe9b8] font-semibold text-[35px] sm:text-[40px]" style={{fontFamily: "Edensor"}}>Get the fashion feel</h1>
+              <div className="w-[90%] sm:w-[60%] mt-[20px] text-left sm:text-right">
               <p className="text-white">Our design philosophy at Glimere is to create a user-friendly platform with a touch of fashionable flair and a modern concept.</p>
               </div>
           </div>
         </div>
 
 
-        <div className="h-[100vh] bg-[#fff5ee] w-full px-[40px] sm:px-[4rem] relative flex flex-col-reverse sm:flex-row">
+        <div ref={elementRef} className="h-[100vh] bg-[#fff5ee] w-full px-[40px] sm:px-[4rem] relative flex flex-col-reverse sm:flex-row">
           <div className="flex-[1] flex items-center">
             <div className="">
-              <h1 className="font-medium text-[30px] sm:text-[70px] mb-[30px]" style={{fontFamily: "Edensor"}}>Ready to slay the fashion game?</h1>
-              <div className="w-[70%]">
-                <p className='text-[19px] mb-[30px]'>Get in line with Glimere's waitlist and join the fashion revolution!</p>
+              <h1 className="font-medium text-[40px] sm:text-[70px] mb-[30px]" style={{fontFamily: "Edensor"}}>Ready to slay the fashion game?</h1>
+              <div className="w-[90%] sm:w-[70%]">
+                <p className='text-[15px] sm:text-[19px] mb-[30px]'>Get in line with Glimere's waitlist and join the fashion revolution!</p>
               </div>
               
-              <button className='px-[40px] py-[12px] bg-[#ed7534] flex justify-center items-center text-white text-[15px] rounded-[10px] cursor-pointer'>
-                Join Now!
-              </button>
+              <Link to="https://forms.gle/rh9Mc8ZyErpCG51L6">
+                <button className='px-[40px] py-[12px] bg-[#ed7534] flex justify-center items-center text-white text-[15px] rounded-[10px] cursor-pointer'>
+                  Join Now!
+                </button>
+              </Link>
+              
             </div>
           </div>
           <div className="flex-[0.6] sm:flex-[1] flex justify-center items-center">
@@ -310,18 +321,20 @@ Join us on Glimere to be a part of a community that values inclusivity and celeb
           </div>
         </div>
 
-          <div className="bg-[#772f1a] w-full h-[300px] flex">
+          <div className="bg-[#772f1a] w-full h-[300px] flex flex-col sm:flex-row pt-[40px] sm:pt-0">
 
-          <div className="flex-[1] flex flex-row justify-center items-center px-[60px]">
-              <div className="flex-[1] flex flex-col justify-center items-center">
-                <img src={glimerenew} alt="" className='w-[100px]'/>
-                <img src={glimere1} alt="" className='w-[100px] mt-[30px]'/>
+          <div className="flex-[1] flex flex-row-reverse sm:flex-col-reverse justify-center items-center px-[40px] sm:p-[60px]">
+             
+              {/* <div className="flex-[1.9] pl-0 flex items-center">
+              <h1 className="text-[18px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Fashion for all: Personalized and Professional</h1>
+              </div> */}
+
+               <div className="flex-[1] flex flex-col sm:flex-row justify-center items-center">
+                <img src={glimerenew} alt="" className='w-[70px] sm:w-[40px]'/>
+                <img src={glimere1} alt="" className='w-[70px] sm:w-[100px] mt-[10px] sm:ml-[20px]'/>
               </div>
-              <div className="flex-[1.9]">
-              <h1 className="text-[25px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Fashion for all: Personalized and Professional</h1>
-              </div>
-              
-            </div>
+
+          </div>
 
             <div className="flex-[1] flex flex-row p-[20px] items-center justify-center">
             
@@ -332,9 +345,9 @@ Join us on Glimere to be a part of a community that values inclusivity and celeb
                   <div className="h-[10px] w-[10px] bg-[#ffe9b8] rounded-full"></div>
                 </div>
               </div> */}
-              <div className="flex flex-row justify-between w-[50%]">
+              <div className="flex flex-row justify-between w-[80%] sm:w-[50%]">
                 <div className='flex justify-center items-center cursor-pointer'>
-                  <a href="">
+                  <a href="https://web.facebook.com/Glimere">
                     <img src={facebook} alt="" className='w-[45px]' />
                   </a>
                 </div>
