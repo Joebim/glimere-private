@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../global-components/navbar'
+import Navbar from '../global-components/Navbar'
 import { Link } from 'react-router-dom';
 import landingImg from '../assets/glimere-landing.png'
 // import * as THREE from 'three';
