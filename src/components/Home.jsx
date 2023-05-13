@@ -3,7 +3,7 @@ import Navbar from '../global-components/Navbar'
 import { Link } from 'react-router-dom';
 import landingImg from '../assets/glimere-landing.png'
 // import * as THREE from 'three';
-import { useRef } from 'react';
+import { useRef } from 'react'
 import glimere from '../assets/glimere.svg'
 import glimerenew from '../assets/glimerenew.svg'
 import style from "../assets/style.jpg"
