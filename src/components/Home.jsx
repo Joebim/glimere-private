@@ -117,7 +117,7 @@ const countdownInterval = setInterval(function() {
 
   useEffect(() => {
     setSubmitted(false)
-    setFormState({ name: "", email: ""});
+    // setFormState({ name: "", email: ""});
   }, [open])
 
   
@@ -134,7 +134,7 @@ const countdownInterval = setInterval(function() {
     //   .then(() => console.log("Success!"))
     //   .catch((error) => console.log(error));
 
-    console.log('formState', formState)
+    // console.log('formState', formState)s
     setSubmitted(true)
   };
   
@@ -450,7 +450,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                         </div>
                     </div>
                     :<form 
-                    // onSubmit={handleSubmit} 
+                    onSubmit={handleSubmit} 
        
                     name="contact" action='/contact' method="POST">
                       <input type="hidden" name="form-name" value="contact" />
