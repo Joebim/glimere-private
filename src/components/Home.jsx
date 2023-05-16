@@ -442,7 +442,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                     :<form 
                     onSubmit={handleSubmit} 
        
-                    name="contact" action='/contact' method="post">
+                    name="contact" action='/contact' method="POST">
                       <input type="hidden" name="form-name" value="contact" />
                  
                     <div className="border-b border-gray-900/10 pb-4">
