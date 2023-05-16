@@ -450,7 +450,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                         </div>
                     </div>
                     :<form 
-                    onSubmit={handleSubmit} 
+                    // onSubmit={handleSubmit} 
        
                     name="contact" action='/contact' method="POST">
                       <input type="hidden" name="form-name" value="contact" />
