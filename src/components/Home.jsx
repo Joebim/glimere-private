@@ -117,7 +117,6 @@ const countdownInterval = setInterval(function() {
 
   useEffect(() => {
     setSubmitted(false)
-    setFormState({ name: "", email: ""});
   }, [open])
 
   
@@ -125,16 +124,6 @@ const countdownInterval = setInterval(function() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // fetch("https://glimere.com/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({ "form-name": "contact", ...formState }),
-    // })
-    //   .then(() => console.log("Success!"))
-    //   .catch((error) => console.log(error));
-
-    console.log('formState', formState)
     setSubmitted(true)
   };
   
@@ -473,9 +462,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                           <div className="sm:col-span-4">
                             <div className="mt-2">
                               <input required id="email" name="email" placeholder='Email' 
-                              // value={formState.email} 
                               type="email" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
-                              // onChange={handleChange}
                               ></input>
                             </div>
                           </div>
