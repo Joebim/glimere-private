@@ -118,13 +118,13 @@ const countdownInterval = setInterval(function() {
 
     console.log('formState', formState)
   
-    fetch("https://glimere.com/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...formState }),
-    })
-      .then(() => console.log("Success!"))
-      .catch((error) => console.log(error));
+    // fetch("https://glimere.com/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "contact", ...formState }),
+    // })
+    //   .then(() => console.log("Success!"))
+    //   .catch((error) => console.log(error));
   };
   
   const handleChange = (e) => {
@@ -433,7 +433,11 @@ We encourage individuals to showcase their unique style and creativity, regardle
               <Dialog.Panel className="relative max-h-[700px] p-4 overflow-y-visible transform overflow-hidden rounded-lg bg-[#fff5ee] text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="bg-[#fff5ee] px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    <form onSubmit={handleSubmit} netlify="true" name="contact" method="POST">
+                    <form 
+                    onSubmit={handleSubmit} 
+                    // netlify="true" 
+                    name="contact" action='/contact' method="POST">
+                      <input type="hidden" name="form-name" value="contact" />
                     <input type="hidden" name="form-name" value="contact" />
                     <div className="border-b border-gray-900/10 pb-4">
                         <h2 className="text-[40px] font-semibold  text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Get Early Access to Glimere's Exclusive App!</h2>
@@ -442,7 +446,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                         <div className="mt-10 ">
                           <div className="sm:col-span-3 mb-4">
                             <div className="mt-2">
-                              <input type="text" name="name" placeholder='Name' value={formState.name} id="first-name" autoComplete="given-name" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
+                              <input required type="text" name="name" placeholder='Name' value={formState.name} id="first-name" autoComplete="given-name" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
                               onChange={handleChange}
                               ></input>
                             </div>
@@ -450,7 +454,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
 
                           <div className="sm:col-span-4">
                             <div className="mt-2">
-                              <input id="email" name="email" placeholder='Email' value={formState.email} type="email" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
+                              <input required id="email" name="email" placeholder='Email' value={formState.email} type="email" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
                               onChange={handleChange}
                               ></input>
                             </div>
