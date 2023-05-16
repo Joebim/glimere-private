@@ -117,6 +117,7 @@ const countdownInterval = setInterval(function() {
 
   useEffect(() => {
     setSubmitted(false)
+    setFormState({ name: "", email: ""});
   }, [open])
 
   
@@ -126,8 +127,6 @@ const countdownInterval = setInterval(function() {
     e.preventDefault();
 
     console.log('formState', formState)
-  
-    setFormState({ name: "", email: ""});
     setSubmitted(true)
   };
   
@@ -441,7 +440,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                     <div className='h-full w-full flex justify-center items-center'>
                         <div className="flex flex-col items-center">
                           <h1 className="text-[35px] text-center" style={{fontFamily: "Edensor"}}>Thank you for your interest in Glimere</h1>
-                          <img src={success} alt="" className='w-[300px] mt-[40px]' />
+                          <img src={success} alt="" className='w-[250px] mt-[40px]' />
                         </div>
                     </div>
                     :<form 
