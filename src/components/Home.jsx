@@ -22,11 +22,16 @@ import twitter from '../assets/twitter.svg'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 
-
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
 
 export default function Home() {
 
 	const [open, setOpen] = useState(false)
+  const [formState, setFormState] = useState({ name: "", email: ""});
 
   const cancelButtonRef = useRef(null)
 
@@ -103,6 +108,31 @@ const countdownInterval = setInterval(function() {
   //   animate();
   // }, []);
 
+  // function validateEmail(email) {
+  //   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   return re.test(email);
+  // }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log('formState', formState)
+  
+    fetch("https://glimere.com/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...formState }),
+    })
+      .then(() => console.log("Success!"))
+      .catch((error) => console.log(error));
+  };
+  
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
+
+
+
   return (
     <>
         <Navbar handleButtonClick={handleButtonClick}/>
@@ -117,7 +147,7 @@ const countdownInterval = setInterval(function() {
             <h1 className="text-[20px] sm:text-[30px] text-left text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Connect, Create, and Empower</h1>
             </div> */}
             <div className="w-[70%] ">
-            <h1 className="text-[13px] text-left text-[#9d5c0d]">Empower your fashion dreams with Glimere's platform, connecting you with like-minded individuals, creating stunning portfolios, and providing endless opportunities for growth and success - all in one place.</h1>
+            <h1 className="text-[15px] text-left text-[#9d5c0d]">Empower your fashion dreams with Glimere's platform, connecting you with like-minded individuals, creating stunning portfolios, and providing endless opportunities for growth and success - all in one place.</h1>
             </div>
           </div>
            
@@ -155,7 +185,7 @@ const countdownInterval = setInterval(function() {
             <h1 className="text-[35px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Empower Yourself with Endless Opportunities</h1>
             </div>
             <div className="w-[90%] sm:w-[70%] ">
-            <h1 className="text-[13px] text-left text-[#9d5c0d]">Unlock Limitless Career Opportunities with Glimere's job portal, featuring a wide range of positions in the fashion industry. From design to marketing, discover your dream job and take the next step in your career.</h1>
+            <h1 className="text-[15px] text-left text-[#9d5c0d]">Unlock Limitless Career Opportunities with Glimere's job portal, featuring a wide range of positions in the fashion industry. From design to marketing, discover your dream job and take the next step in your career.</h1>
             </div>
           </div>
           
@@ -196,7 +226,7 @@ const countdownInterval = setInterval(function() {
             <h1 className="text-[38px] sm:text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Join a Thriving Fashion Community</h1>
             </div>
             <div className="w-[90%] sm:w-[70%] ">
-            <h1 className="text-[13px] text-left text-white">Connect with like-minded individuals who share your passion for fashion. Collaborate with other creatives, exchange ideas, and share your work.</h1>
+            <h1 className="text-[15px] text-left text-white">Connect with like-minded individuals who share your passion for fashion. Collaborate with other creatives, exchange ideas, and share your work.</h1>
             </div>
           </div>
           </div>
@@ -217,7 +247,7 @@ const countdownInterval = setInterval(function() {
             <h1 className="text-[38px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Showcase Your Creativity and Skills</h1>
             </div>
             <div className="w-[70%] ">
-            <h1 className="text-[13px] text-left text-[#9d5c0d]">Showcase your unique style with a stunning portfolio that captures your essence and creativity, and sets you apart in the fashion industry.</h1>
+            <h1 className="text-[15px] text-left text-[#9d5c0d]">Showcase your unique style with a stunning portfolio that captures your essence and creativity, and sets you apart in the fashion industry.</h1>
             </div>
           </div>
           </div>
@@ -235,13 +265,11 @@ const countdownInterval = setInterval(function() {
             <h1 className="text-[38px] sm:text-[50px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>We Value Inclusivity</h1>
             </div>
             <div className="w-full sm:w-[70%] ">
-            <h1 className="text-[13px] text-left text-[#cec1ba]">At Glimere, we believe in a platform that welcomes everyone. We celebrate diversity and are committed to providing a safe and welcoming space for individuals from all walks of life.
+            <h1 className="text-[15px] text-left text-[#cec1ba]">At Glimere, we believe in a platform that welcomes everyone. We celebrate diversity and are committed to providing a safe and welcoming space for individuals from all walks of life.
 
 Our community is built on the foundation of respect and understanding, and we believe in creating a culture where everyone feels valued and empowered to express themselves freely and authentically.
 
-We encourage individuals to showcase their unique style and creativity, regardless of their race, gender, age, or background. Our goal is to create a community that embraces diversity and promotes inclusivity.
-
-Join us on Glimere to be a part of a community that values inclusivity and celebrates the beauty of our differences.</h1>
+We encourage individuals to showcase their unique style and creativity, regardless of their race, gender, age, or background.</h1>
             </div>
           </div>
           </div>
@@ -279,7 +307,7 @@ Join us on Glimere to be a part of a community that values inclusivity and celeb
                 <p className='text-[15px] sm:text-[19px] mb-[30px]'>Get in line with Glimere's waitlist and join the fashion revolution!</p>
               </div>
               
-                <button className='px-[40px] py-[12px] bg-[#ed7534] flex justify-center items-center text-white text-[15px] rounded-[10px] cursor-pointer'
+                <button className='px-[40px] py-[12px] bg-[#ed7534] duration-150 hover:bg-[#9d5c0d] flex justify-center items-center text-white text-[15px] rounded-[10px] cursor-pointer'
 	  onClick={()=>{setOpen(true)}}
 	  >
                   Join Now!
@@ -341,30 +369,30 @@ Join us on Glimere to be a part of a community that values inclusivity and celeb
             <div className="flex-[1] flex flex-row p-[20px] items-center justify-center">
             
               {/* <div className="px-[60px]">
-                <h3 className="text-[#ffe9b8] text-[13px]">Socials</h3>
+                <h3 className="text-[#ffe9b8] text-[15px]">Socials</h3>
                 <div className="flex flex-row items-center mb-[18px]">
                   <div className="h-[1px] w-[40%] bg-[#ffe9b8]"></div>
                   <div className="h-[10px] w-[10px] bg-[#ffe9b8] rounded-full"></div>
                 </div>
               </div> */}
               <div className="flex flex-row justify-between w-[80%] sm:w-[50%]">
-                <div className='flex justify-center items-center cursor-pointer'>
-                  <a href="https://web.facebook.com/Glimere">
+                <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
+                  <a href="https://web.facebook.com/Glimere" target="_blank">
                     <img src={facebook} alt="" className='w-[45px]' />
                   </a>
                 </div>
-                <div className='flex justify-center items-center cursor-pointer'>
-                  <a href="https://twitter.com/glmere">
+                <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
+                  <a href="https://twitter.com/glmere" target="_blank">
                     <img src={twitter} alt="" className='w-[45px]' />
                   </a>
                 </div>
-                <div className='flex justify-center items-center cursor-pointer'>
-                  <a href="https://www.instagram.com/glimereofficial/">
+                <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
+                  <a href="https://www.instagram.com/glimereofficial/" target="_blank">
                     <img src={instagram} alt="" className='w-[45px]' />
                   </a>
                 </div>
-                <div className='flex justify-center items-center cursor-pointer'>
-                  <a href="https://www.linkedin.com/company/glimere/">
+                <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
+                  <a href="https://www.linkedin.com/company/glimere/" target="_blank">
                     <img src={linkedin} alt="" className='w-[45px]' />
                   </a>
                 </div>
@@ -405,28 +433,33 @@ Join us on Glimere to be a part of a community that values inclusivity and celeb
               <Dialog.Panel className="relative max-h-[700px] p-4 overflow-y-visible transform overflow-hidden rounded-lg bg-[#fff5ee] text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="bg-[#fff5ee] px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    <form name="contact" method="POST" netlify>
-                    <div class="border-b border-gray-900/10 pb-4">
-                        <h2 class="text-[40px] font-semibold  text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Get Early Access to Glimere's Exclusive Waitlist!</h2>
-                        <p class="mt-8 text-sm leading-6 text-gray-600">Thank you for your interest in Glimere! Your details will be used to inform you of our epic launch.</p>
+                    <form onSubmit={handleSubmit} netlify="true" name="contact" method="POST">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div className="border-b border-gray-900/10 pb-4">
+                        <h2 className="text-[40px] font-semibold  text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Get Early Access to Glimere's Exclusive App!</h2>
+                        <p className="mt-8 text-sm leading-6 text-gray-600">Thank you for your interest in Glimere! Your details will be used to inform you of our epic launch.</p>
 
-                        <div class="mt-10 ">
-                          <div class="sm:col-span-3 mb-4">
-                            <div class="mt-2">
-                              <input type="text" name="first-name" placeholder='Name' id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"></input>
+                        <div className="mt-10 ">
+                          <div className="sm:col-span-3 mb-4">
+                            <div className="mt-2">
+                              <input type="text" name="name" placeholder='Name' value={formState.name} id="first-name" autoComplete="given-name" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
+                              onChange={handleChange}
+                              ></input>
                             </div>
                           </div>
 
-                          <div class="sm:col-span-4">
-                            <div class="mt-2">
-                              <input id="email" name="email" placeholder='Email' type="email" autocomplete="email" class="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"></input>
+                          <div className="sm:col-span-4">
+                            <div className="mt-2">
+                              <input id="email" name="email" placeholder='Email' value={formState.email} type="email" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
+                              onChange={handleChange}
+                              ></input>
                             </div>
                           </div>
                          
                         </div>
                       </div>
-                      <div class="mt-6 flex items-center justify-center gap-x-6">
-                      <button type="submit" class="rounded-md bg-[#ed7534] px-24 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">I'm in!</button>
+                      <div className="mt-6 flex items-center justify-center gap-x-6">
+                      <button type="submit" className="rounded-md bg-[#ed7534] px-24 py-2 text-sm font-semibold text-white shadow-sm duration-150 hover:bg-[#9d5c0d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">I'm in!</button>
                     </div>
                   </form>
                   
