@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react'
+import React, { Fragment, useRef, useState } from 'react'
 import Navbar from '../global-components/Navbar'
 import { Link } from 'react-router-dom';
 import landingImg from '../assets/glimere-landing.png'
@@ -19,7 +19,6 @@ import facebook from '../assets/facebook.svg'
 import instagram from '../assets/instagram.svg'
 import linkedin from '../assets/linkedin.svg'
 import twitter from '../assets/twitter.svg'
-import success from '../assets/success.png'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 
@@ -33,7 +32,6 @@ export default function Home() {
 
 	const [open, setOpen] = useState(false)
   const [formState, setFormState] = useState({ name: "", email: ""});
-  const [submitted, setSubmitted] = useState(false)
 
   const cancelButtonRef = useRef(null)
 
@@ -115,19 +113,18 @@ const countdownInterval = setInterval(function() {
   //   return re.test(email);
   // }
 
-  useEffect(() => {
-    setSubmitted(false)
-    setFormState({ name: "", email: ""});
-  }, [open])
-
-  
-  
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
     console.log('formState', formState)
-    setSubmitted(true)
+  
+    // fetch("https://glimere.com/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "contact", ...formState }),
+    // })
+    //   .then(() => console.log("Success!"))
+    //   .catch((error) => console.log(error));
   };
   
   const handleChange = (e) => {
@@ -436,14 +433,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
               <Dialog.Panel className="relative max-h-[700px] p-4 overflow-y-visible transform overflow-hidden rounded-lg bg-[#fff5ee] text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
                 <div className="bg-[#fff5ee] px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                   <div className="sm:flex sm:items-start">
-                    {submitted ? 
-                    <div className='h-full w-full flex justify-center items-center'>
-                        <div className="flex flex-col items-center">
-                          <h1 className="text-[35px] text-center" style={{fontFamily: "Edensor"}}>Thank you for your interest in Glimere</h1>
-                          <img src={success} alt="" className='w-[250px] mt-[40px]' />
-                        </div>
-                    </div>
-                    :<form 
+                    <form 
                     onSubmit={handleSubmit} 
                     // netlify="true" 
                     name="contact" action='/contact' method="POST">
@@ -456,7 +446,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                         <div className="mt-10 ">
                           <div className="sm:col-span-3 mb-4">
                             <div className="mt-2">
-                              <input required type="text" name="name" placeholder='Name' value={formState.name} id="name" autoComplete="name" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
+                              <input required type="text" name="name" placeholder='Name' value={formState.name} id="first-name" autoComplete="given-name" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
                               onChange={handleChange}
                               ></input>
                             </div>
@@ -475,7 +465,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                       <div className="mt-6 flex items-center justify-center gap-x-6">
                       <button type="submit" className="rounded-md bg-[#ed7534] px-24 py-2 text-sm font-semibold text-white shadow-sm duration-150 hover:bg-[#9d5c0d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">I'm in!</button>
                     </div>
-                  </form>}
+                  </form>
                   
                   </div>
                 </div>
