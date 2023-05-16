@@ -125,7 +125,7 @@ const countdownInterval = setInterval(function() {
   const handleSubmit = (e) => {
     
     setSubmitted(true)
-    e.preventDefault();
+    // e.preventDefault();
   };
   
 
