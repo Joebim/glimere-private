@@ -460,6 +460,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                         <p className="mt-8 text-sm leading-6 text-gray-600">Thank you for your interest in Glimere! Your details will be used to inform you of our epic launch.</p>
 
                         <div className="mt-10 ">
+
                           <div className="sm:col-span-3 mb-4">
                             <div className="mt-2">
                               <input required type="text" name="name" placeholder='Name' 
@@ -470,7 +471,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                             </div>
                           </div>
 
-                          <div className="sm:col-span-4">
+                          <div className="sm:col-span-4 mb-4">
                             <div className="mt-2">
                               <input required id="email" name="email" placeholder='Email' 
                               // value={formState.email} 
@@ -479,6 +480,50 @@ We encourage individuals to showcase their unique style and creativity, regardle
                               ></input>
                             </div>
                           </div>
+
+                          
+
+                          <div className='relative mb-4'>
+                            <legend className='text-sm leading-6 text-gray-600'>What best describes your fashion role or interests?</legend>
+                        <select id="fashionClass" name="fashionClass[]" multiple className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                          <option value="" disabled selected>Select your fashion class...</option>
+                          <option value="Fashion Enthusiast">Fashion Enthusiast</option>
+                          <option value="Fashion Blogger/Influencer">Fashion Blogger/Influencer</option>
+                          <option value="Fashion Designer">Fashion Designer</option>
+                          <option value="Fashion Stylist">Fashion Stylist</option>
+                          <option value="Fashion Retailer">Fashion Retailer</option>
+                          <option value="Fashion Buyer">Fashion Buyer</option>
+                          <option value="Fashion Journalist">Fashion Journalist</option>
+                          <option value="Fashion Photographer">Fashion Photographer</option>
+                          <option value="Fashion Model">Fashion Model</option>
+                          <option value="Fashion Consultant">Fashion Consultant</option>
+                          <option value="Fashion Entrepreneur">Fashion Entrepreneur</option>
+                          <option value="Fashion Marketer">Fashion Marketer</option>
+                          <option value="Fashion Educator">Fashion Educator</option>
+                          <option value="Fashion Event Planner">Fashion Event Planner</option>
+                          <option value="Fashion PR/Publicist">Fashion PR/Publicist</option>
+                        </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                          <svg className="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor">
+                            <path d="M7 7l3-3 3 3m0 6l-3 3-3-3" />
+                          </svg>
+                        </div>
+                        </div>
+
+                      
+                          <fieldset>
+                          <legend className='text-sm leading-6 text-gray-600'>Will you be interested in beta testing</legend>
+                          <p>
+                            <label>
+                              <input type="radio" name="beta" id='beta' value="Yes" className='text-[#ed7534]' /> Yes
+                            </label>
+                          </p>
+                          <p>
+                            <label>
+                              <input type="radio" name="beta" id='beta' value="No" className='text-[#ed7534]' /> No
+                            </label>
+                          </p>
+                        </fieldset>
                          
                         </div>
                       </div>
