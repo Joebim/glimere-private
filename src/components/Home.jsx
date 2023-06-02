@@ -484,9 +484,9 @@ We encourage individuals to showcase their unique style and creativity, regardle
                           
 
                           <div className='relative mb-4'>
-                            <legend className='text-sm leading-6 text-gray-600'>What best describes your fashion role or interests?</legend>
-                        <select id="fashionClass" name="fashionClass[]" multiple className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                          <option value="" disabled selected>Select your fashion class...</option>
+                            <legend class="text-sm leading-6 text-gray-600">What best describes your fashion role or interests?</legend>
+        <select id="fashionClass" name="fashionClass" multiple class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+          <option value="" disabled selected>Select your fashion class...</option>
                           <option value="Fashion Enthusiast">Fashion Enthusiast</option>
                           <option value="Fashion Blogger/Influencer">Fashion Blogger/Influencer</option>
                           <option value="Fashion Designer">Fashion Designer</option>
@@ -512,7 +512,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
 
                       
                           <fieldset>
-                          <legend className='text-sm leading-6 text-gray-600'>Will you be interested in beta testing</legend>
+                          <legend className='text-sm leading-6 text-gray-600'>Will you be interested in Glimere's beta testing</legend>
                           <p>
                             <label>
                               <input type="radio" name="beta" id='beta' value="Yes" className='text-[#ed7534]' /> Yes
