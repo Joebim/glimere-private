@@ -485,23 +485,23 @@ We encourage individuals to showcase their unique style and creativity, regardle
 
                           <div className='relative mb-4'>
                             <legend class="text-sm leading-6 text-gray-600">What best describes your fashion role or interests?</legend>
-        <select id="fashionClass" name="fashionClass" multiple class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+        <select id="fashionClass" name="fashionClass" multiple class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-[#f7a477] focus:outline-none focus:ring-[#ed7534] focus:border-[#ed7534] sm:text-sm rounded-md">
           <option value="" disabled selected>Select your fashion class...</option>
-                          <option value="Fashion Enthusiast">Fashion Enthusiast</option>
-                          <option value="Fashion Blogger/Influencer">Fashion Blogger/Influencer</option>
-                          <option value="Fashion Designer">Fashion Designer</option>
-                          <option value="Fashion Stylist">Fashion Stylist</option>
-                          <option value="Fashion Retailer">Fashion Retailer</option>
-                          <option value="Fashion Buyer">Fashion Buyer</option>
-                          <option value="Fashion Journalist">Fashion Journalist</option>
-                          <option value="Fashion Photographer">Fashion Photographer</option>
-                          <option value="Fashion Model">Fashion Model</option>
-                          <option value="Fashion Consultant">Fashion Consultant</option>
-                          <option value="Fashion Entrepreneur">Fashion Entrepreneur</option>
-                          <option value="Fashion Marketer">Fashion Marketer</option>
-                          <option value="Fashion Educator">Fashion Educator</option>
-                          <option value="Fashion Event Planner">Fashion Event Planner</option>
-                          <option value="Fashion PR/Publicist">Fashion PR/Publicist</option>
+                          <option value="Fashionista" className='checked:bg-[#ffb590] checked:text-white'>Fashionista</option>
+                          <option value="Fashion Blogger/Influencer" className='checked:bg-[#ffb590] checked:text-white'>Fashion Blogger/Influencer</option>
+                          <option value="Fashion Designer" className='checked:bg-[#ffb590] checked:text-white'>Fashion Designer</option>
+                          <option value="Fashion Stylist" className='checked:bg-[#ffb590] checked:text-white'>Fashion Stylist</option>
+                          <option value="Fashion Retailer" className='checked:bg-[#ffb590] checked:text-white'>Fashion Retailer</option>
+                          <option value="Fashion Buyer" className='checked:bg-[#ffb590] checked:text-white'>Fashion Buyer</option>
+                          <option value="Fashion Journalist" className='checked:bg-[#ffb590] checked:text-white'>Fashion Journalist</option>
+                          <option value="Fashion Photographer" className='checked:bg-[#ffb590] checked:text-white'>Fashion Photographer</option>
+                          <option value="Fashion Model" className='checked:bg-[#ffb590] checked:text-white'>Fashion Model</option>
+                          <option value="Fashion Consultant" className='checked:bg-[#ffb590] checked:text-white'>Fashion Consultant</option>
+                          <option value="Fashion Entrepreneur" className='checked:bg-[#ffb590] checked:text-white'>Fashion Entrepreneur</option>
+                          <option value="Fashion Marketer" className='checked:bg-[#ffb590] checked:text-white'>Fashion Marketer</option>
+                          <option value="Fashion Educator" className='checked:bg-[#ffb590] checked:text-white'>Fashion Educator</option>
+                          <option value="Fashion Event Planner" className='checked:bg-[#ffb590] checked:text-white'>Fashion Event Planner</option>
+                          <option value="Fashion PR/Publicist" className='checked:bg-[#ffb590] checked:text-white'>Fashion PR/Publicist</option>
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                           <svg className="h-4 w-4" viewBox="0 0 20 20" fill="none" stroke="currentColor">
@@ -510,17 +510,19 @@ We encourage individuals to showcase their unique style and creativity, regardle
                         </div>
                         </div>
 
+                        
+
                       
                           <fieldset>
                           <legend className='text-sm leading-6 text-gray-600'>Will you be interested in Glimere's beta testing</legend>
                           <p>
                             <label>
-                              <input type="radio" name="beta" id='beta' value="Yes" className='text-[#ed7534]' /> Yes
+                              <input type="radio" name="beta" id='beta' value="Yes" className='text-[#ed7534] checked:text-[#ed7534] focus:ring-2 focus:ring-transparent after:text-[#ed7534]' /> Yes
                             </label>
                           </p>
                           <p>
                             <label>
-                              <input type="radio" name="beta" id='beta' value="No" className='text-[#ed7534]' /> No
+                              <input type="radio" name="beta" id='beta' value="No" className='text-[#ed7534] checked:text-[#ed7534] focus:ring-2 focus:ring-transparent after:text-[#ed7534]' /> No
                             </label>
                           </p>
                         </fieldset>
