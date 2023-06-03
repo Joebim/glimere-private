@@ -362,7 +362,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
 
           <div className="bg-[#772f1a] w-full h-[300px] flex flex-col sm:flex-row pt-[40px] sm:pt-0">
 
-          <div className="flex-[1] flex flex-row-reverse sm:flex-col-reverse justify-center items-center px-[40px] sm:p-[60px]">
+          <div className="flex-[1] flex flex-row-reverse sm:flex-col-reverse justify-center lg:pl-[120px] items-start px-[40px] sm:p-[60px]">
              
               {/* <div className="flex-[1.9] pl-0 flex items-center">
               <h1 className="text-[18px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Fashion for all: Personalized and Professional</h1>
