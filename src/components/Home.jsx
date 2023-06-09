@@ -20,6 +20,7 @@ import instagram from '../assets/instagram.svg'
 import linkedin from '../assets/linkedin.svg'
 import twitter from '../assets/twitter.svg'
 import success from '../assets/success.png'
+import tools from '../assets/tools.png'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 
@@ -262,6 +263,23 @@ const countdownInterval = setInterval(function() {
           </div>
         </div>
 
+        <div className="h-[100vh] bg-[#fcd990] w-full relative flex flex-col sm:flex-row-reverse">
+          <div className="flex-[1] h-[370px] sm:h-auto flex justify-center sm:items-end sm:mr-[150px] absolute sm:relative w-full sm:w-auto">
+            <img src={tools} alt="" className='h-full rotate-90 sm:rotate-0' />
+          </div>
+
+          <div className="flex-[1.1] mt-[300px] sm:mt-0">
+          <div className="h-full sm:pl-[4rem] px-[40px] flex flex-col justify-center">
+            <div className="w-[90%] mb-[15px]  pt-[30px] sm:pt-0">
+            <h1 className="text-[38px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold" style={{fontFamily: "Edensor"}}>Get The Realistic Experience</h1>
+            </div>
+            <div className="w-[70%]">
+            <h1 className="text-[15px] text-left text-[#9d5c0d]">Experience fashion like never before with Glimere's cutting-edge augmented reality tools. Our platform combines technology and style to provide an immersive and interactive fashion experience.</h1>
+            </div>
+          </div>
+          </div>
+        </div>
+
 
         <div className="h-[100vh] bg-[#332f2d] w-full relative flex flex-row-reverse">
         <div className="flex-[1] items-end hidden sm:flex">
@@ -459,7 +477,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
                         <h2 className="text-[40px] font-semibold  text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Get Early Access to Glimere's Exclusive App!</h2>
                         <p className="mt-8 text-sm leading-6 text-gray-600">Thank you for your interest in Glimere! Your details will be used to inform you of our epic launch.</p>
 
-                        <div className="mt-10 ">
+                        <div className="mt-[20px] ">
 
                           <div className="sm:col-span-3 mb-4">
                             <div className="mt-2">
@@ -476,6 +494,16 @@ We encourage individuals to showcase their unique style and creativity, regardle
                               <input required id="email" name="email" placeholder='Email' 
                               // value={formState.email} 
                               type="email" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
+                              // onChange={handleChange}
+                              ></input>
+                            </div>
+                          </div>
+
+                           <div className="sm:col-span-4 mb-4">
+                            <div className="mt-2">
+                              <input required id="country" name="country" placeholder='Country' 
+                              // value={formState.email} 
+                              type="text" autoComplete="country" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
                               // onChange={handleChange}
                               ></input>
                             </div>
