@@ -378,9 +378,9 @@ We encourage individuals to showcase their unique style and creativity, regardle
           </div>
         </div>
 
-          <div className="bg-[#772f1a] w-full h-[300px] flex flex-col sm:flex-row pt-[40px] sm:pt-0">
+          <div className="bg-[#772f1a] w-full h-[400px] flex flex-col-reverse sm:flex-row pt-0">
 
-          <div className="flex-[1] flex flex-row-reverse sm:flex-col-reverse justify-center lg:pl-[120px] items-start px-[40px] sm:p-[60px]">
+          <div className="flex-[1] flex flex-row-reverse sm:flex-col-reverse justify-center lg:pl-[120px] items-start px-[40px] sm:p-[60px] py-[40px]">
              
               {/* <div className="flex-[1.9] pl-0 flex items-center">
               <h1 className="text-[18px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Fashion for all: Personalized and Professional</h1>
@@ -393,15 +393,17 @@ We encourage individuals to showcase their unique style and creativity, regardle
 
           </div>
 
-            <div className="flex-[1] flex flex-row p-[20px] items-center justify-center">
+            <div className="flex-[1] bg-[#ffe9b8] flex flex-col p-[20px] items-center justify-center">
             
-              {/* <div className="px-[60px]">
-                <h3 className="text-[#ffe9b8] text-[15px]">Socials</h3>
-                <div className="flex flex-row items-center mb-[18px]">
+              <div className="pb-[40px]">
+                <h3 className="text-[#772f1a] text-[45px] sm:text-[50px]" style={{fontFamily: "Edensor"}}>Let's Get social!</h3>
+                {/* <div className="flex flex-row items-center mb-[18px]">
                   <div className="h-[1px] w-[40%] bg-[#ffe9b8]"></div>
                   <div className="h-[10px] w-[10px] bg-[#ffe9b8] rounded-full"></div>
-                </div>
-              </div> */}
+                </div> */}
+              </div>
+
+
               <div className="flex flex-row justify-between w-[80%] sm:w-[50%]">
                 <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
                   <a href="https://web.facebook.com/Glimere" target="_blank">
