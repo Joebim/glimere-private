@@ -378,15 +378,15 @@ We encourage individuals to showcase their unique style and creativity, regardle
           </div>
         </div>
 
-          <div className="bg-[#772f1a] w-full h-[400px] flex flex-col-reverse sm:flex-row pt-0">
+          <div className="bg-[#4e2012] w-full h-[420px] sm:h-[400px] flex flex-col-reverse sm:flex-row pt-0">
 
-          <div className="flex-[1] flex flex-row-reverse sm:flex-col-reverse justify-center lg:pl-[120px] items-start px-[40px] sm:p-[60px] py-[40px]">
+          <div className="flex-[1] flex flex-col-reverse justify-center items-start">
              
-              {/* <div className="flex-[1.9] pl-0 flex items-center">
-              <h1 className="text-[18px] text-left text-white font-semibold" style={{fontFamily: "Edensor"}}>Fashion for all: Personalized and Professional</h1>
-              </div> */}
+              <div className="w-full flex-[1] bg-[#FFC588] flex items-center justify-center px-[40px]  py-[40px]">
+              <h1 className="text-[50px] text-left text-[#772f1a]" style={{fontFamily: "Edensor"}}>Fashion for all, <br/> <span className='text-[24px]'>Personalised and professional</span></h1>
+              </div>
 
-               <div className="flex-[1] flex flex-col sm:flex-row justify-center items-center">
+               <div className="w-full flex-[1] flex flex-col sm:flex-row justify-center items-center px-[40px]  py-[40px]">
                 <img src={glimerenew} alt="" className='w-[70px] sm:w-[40px]'/>
                 <img src={glimere1} alt="" className='w-[70px] sm:w-[100px] mt-[10px] sm:ml-[20px]'/>
               </div>
@@ -396,7 +396,7 @@ We encourage individuals to showcase their unique style and creativity, regardle
             <div className="flex-[1] bg-[#ffe9b8] flex flex-col p-[20px] items-center justify-center">
             
               <div className="pb-[40px]">
-                <h3 className="text-[#772f1a] text-[45px] sm:text-[50px]" style={{fontFamily: "Edensor"}}>Let's Get social!</h3>
+                <h3 className="text-[#945643] text-[45px] sm:text-[50px] font-semibold" style={{fontFamily: "Edensor"}}>Let's Get social!</h3>
                 {/* <div className="flex flex-row items-center mb-[18px]">
                   <div className="h-[1px] w-[40%] bg-[#ffe9b8]"></div>
                   <div className="h-[10px] w-[10px] bg-[#ffe9b8] rounded-full"></div>
