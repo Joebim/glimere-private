@@ -21,6 +21,7 @@ import linkedin from '../assets/linkedin.svg'
 import twitter from '../assets/twitter.svg'
 import success from '../assets/success.png'
 import tools from '../assets/tools.png'
+import youtube from '../assets/youtube.svg'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 
@@ -378,12 +379,12 @@ We encourage individuals to showcase their unique style and creativity, regardle
           </div>
         </div>
 
-          <div className="bg-[#4e2012] w-full h-[420px] sm:h-[400px] flex flex-col-reverse sm:flex-row pt-0">
+          <div className="bg-[#4e2012] w-full h-[700px] sm:h-[400px] flex flex-col-reverse sm:flex-row pt-0">
 
           <div className="flex-[1] flex flex-col-reverse justify-center items-start">
              
-              <div className="w-full flex-[1] bg-[#FFC588] flex items-center justify-center px-[40px]  py-[40px]">
-              <h1 className="text-[50px] text-left text-[#772f1a]" style={{fontFamily: "Edensor"}}>Fashion for all, <br/> <span className='text-[24px]'>Personalised and professional</span></h1>
+              <div className="w-full flex-[1] bg-[#FFC588] flex flex-col items-center justify-center px-[40px]  py-[40px]">
+              <h1 className="text-[40px] sm:text-[50px] text-left text-[#772f1a]" style={{fontFamily: "Edensor"}}>Fashion for all,</h1> <br/> <p className='text-[20px] sm:text-[24px]' style={{fontFamily: "Edensor"}}>Personalised and professional</p>
               </div>
 
                <div className="w-full flex-[1] flex flex-col sm:flex-row justify-center items-center px-[40px]  py-[40px]">
@@ -423,6 +424,11 @@ We encourage individuals to showcase their unique style and creativity, regardle
                 <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
                   <a href="https://www.linkedin.com/company/glimere/" target="_blank">
                     <img src={linkedin} alt="" className='w-[45px]' />
+                  </a>
+                </div>
+                <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
+                  <a href="https://www.youtube.com/channel/UCeJZsLwqBttjiaPdtoNnh6g" target="_blank">
+                    <img src={youtube} alt="" className='w-[45px]' />
                   </a>
                 </div>
               </div>   
