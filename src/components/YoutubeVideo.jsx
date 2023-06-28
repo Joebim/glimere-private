@@ -1,7 +1,7 @@
 import React from 'react'
 import YouTube from 'react-youtube';
 
-export default function YoutubeVideo() {
+export default function YoutubeVideo(props) {
  // YouTube video options
  const opts = {
     height: '500',
@@ -10,6 +10,7 @@ export default function YoutubeVideo() {
       // YouTube video parameters (optional)
       autoplay: 0,
     },
+    onReady: props.onReady,
   };
 
   // YouTube video onReady event

@@ -38,9 +38,48 @@ export default function Home() {
   const [open, setOpen] = useState(false)
   const [formState, setFormState] = useState({ name: "", email: "" });
   const [submitted, setSubmitted] = useState(false)
+  const [play, setPlay] = useState(false)
 
   const cancelButtonRef = useRef(null)
 
+  const playref = useRef(null)
+
+  
+
+
+  useEffect(() => {
+ 
+
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5, // Play video when at least 50% of it is visible
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+    observer.observe(playref.current);
+
+    return () => {
+      observer.unobserve(playref.current);
+    };
+  }, []);
+
+
+  const handleIntersection = (entries) => {
+   
+    
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        playRef.current.internalPlayer.playVideo();
+      } else {
+        playRef.current.internalPlayer.pauseVideo();
+      }
+    });
+  };
+
+  const onReady = (event) => {
+    playref.current = event.target;
+  }
   // Set the date you're counting down to
   const countDownDate = new Date("August 25, 2023 00:00:00").getTime();
 
@@ -329,13 +368,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container bg-[#ffe9b8] max-w-full flex justify-center items-center">
+      <div ref={playref} className="container bg-[#ffe9b8] max-w-full flex justify-center items-center">
         {/* Other content */}
         <div className="hidden sm:block my-[70px]">
-          <YoutubeVideo />
+          <YoutubeVideo onReady={onReady}/>
         </div>
         <div className="block sm:hidden my-[70px]">
-          <YoutubeVideoSmall />
+          <YoutubeVideoSmall onReady={onReady}/>
         </div>
         {/* Other content */}
       </div>
