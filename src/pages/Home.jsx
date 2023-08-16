@@ -24,14 +24,9 @@ import tools from '../assets/tools.png'
 import youtube from '../assets/youtube.svg'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
-import YoutubeVideo from './YoutubeVideo';
-import YoutubeVideoSmall from './YoutubeVideoSmall';
+import YoutubeVideo from '../components/YoutubeVideo';
+import YoutubeVideoSmall from '../components/YoutubeVideoSmall';
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
 
 export default function Home() {
 
@@ -44,38 +39,6 @@ export default function Home() {
 
   const playref = useRef(null)
 
-  
-
-
-  useEffect(() => {
- 
-
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5, // Play video when at least 50% of it is visible
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-    observer.observe(playref.current);
-
-    return () => {
-      observer.unobserve(playref.current);
-    };
-  }, []);
-
-
-  const handleIntersection = (entries) => {
-   
-    
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        playRef.current.internalPlayer.playVideo();
-      } else {
-        playRef.current.internalPlayer.pauseVideo();
-      }
-    });
-  };
 
   const onReady = (event) => {
     playref.current = event.target;
@@ -189,7 +152,7 @@ export default function Home() {
     <>
       <Navbar handleButtonClick={handleButtonClick} />
 
-      <div className='h-[100vh] bg-[#fff5ee] w-full px-[40px] sm:px-[4rem] pt-[80px] relative flex flex-row items-center'>
+      <div className='h-[100vh] bg-[#ffe9b8]  w-full px-[40px] sm:px-[4rem] pt-[80px] relative flex flex-row items-center'>
 
         <div className="flex-[1] h-full flex flex-col justify-center">
           <div className="w-[90%] mb-[15px]">
@@ -199,13 +162,13 @@ export default function Home() {
             <h1 className="text-[20px] sm:text-[30px] text-left text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Connect, Create, and Empower</h1>
             </div> */}
           <div className="w-[70%] ">
-            <h1 className="text-[15px] text-left text-[#9d5c0d]">Empower your fashion dreams with Glimere's platform, connecting you with like-minded individuals, creating stunning portfolios, and providing endless opportunities for growth and success - all in one place.</h1>
+            <h1 className="text-[15px] text-left text-[#9d5c0d]">Empower your fashion dreams with Glimere&rsquo;s platform, connecting you with like-minded individuals, creating stunning portfolios, and providing endless opportunities for growth and success - all in one place.</h1>
           </div>
         </div>
 
 
 
-        <div className="h-[500px] w-[500px] bg-[#ffe9b8] overflow-hidden rounded-full bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
+        <div className="h-[500px] w-[500px] bg-[#fff5ee] overflow-hidden rounded-full bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
           <img src={landingImg} alt="" className='hidden sm:block px-[10px] pt-[10px] sm:px-[30px] sm:pt-[30px]' />
         </div>
 
@@ -237,7 +200,7 @@ export default function Home() {
             <h1 className="text-[35px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold" style={{ fontFamily: "Edensor" }}>Empower Yourself with Endless Opportunities</h1>
           </div>
           <div className="w-[90%] sm:w-[70%] ">
-            <h1 className="text-[15px] text-left text-[#9d5c0d]">Unlock Limitless Career Opportunities with Glimere's job portal, featuring a wide range of positions in the fashion industry. From design to marketing, discover your dream job and take the next step in your career.</h1>
+            <h1 className="text-[15px] text-left text-[#9d5c0d]">Unlock Limitless Career Opportunities with Glimere&rsquo;s job portal, featuring a wide range of positions in the fashion industry. From design to marketing, discover your dream job and take the next step in your career.</h1>
           </div>
         </div>
 
@@ -316,7 +279,7 @@ export default function Home() {
               <h1 className="text-[38px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold" style={{ fontFamily: "Edensor" }}>Get The Realistic Experience</h1>
             </div>
             <div className="w-[70%]">
-              <h1 className="text-[15px] text-left text-[#9d5c0d]">Experience fashion like never before with Glimere's cutting-edge augmented reality tools. Our platform combines technology and style to provide an immersive and interactive fashion experience.</h1>
+              <h1 className="text-[15px] text-left text-[#9d5c0d]">Experience fashion like never before with Glimere&rsquo;s cutting-edge augmented reality tools. Our platform combines technology and style to provide an immersive and interactive fashion experience.</h1>
             </div>
           </div>
         </div>
@@ -385,7 +348,7 @@ export default function Home() {
           <div className="">
             <h1 className="font-medium text-[40px] sm:text-[70px] mb-[30px]" style={{ fontFamily: "Edensor" }}>Ready to slay the fashion game?</h1>
             <div className="w-[90%] sm:w-[70%]">
-              <p className='text-[15px] sm:text-[19px] mb-[30px]'>Get in line with Glimere's waitlist and join the fashion revolution!</p>
+              <p className='text-[15px] sm:text-[19px] mb-[30px]'>Get in line with Glimere&rsquo;s waitlist and join the fashion revolution!</p>
             </div>
 
             <button className='px-[40px] py-[12px] bg-[#ed7534] duration-150 hover:bg-[#9d5c0d] flex justify-center items-center text-white text-[15px] rounded-[10px] cursor-pointer'
@@ -450,7 +413,7 @@ export default function Home() {
         <div className="flex-[1] bg-[#ffe9b8] flex flex-col p-[20px] items-center justify-center">
 
           <div className="pb-[40px]">
-            <h3 className="text-[#945643] text-[45px] sm:text-[50px] font-semibold" style={{ fontFamily: "Edensor" }}>Let's Get social!</h3>
+            <h3 className="text-[#945643] text-[45px] sm:text-[50px] font-semibold" style={{ fontFamily: "Edensor" }}>Let&rsquo;s Get social!</h3>
             {/* <div className="flex flex-row items-center mb-[18px]">
                   <div className="h-[1px] w-[40%] bg-[#ffe9b8]"></div>
                   <div className="h-[10px] w-[10px] bg-[#ffe9b8] rounded-full"></div>
@@ -460,27 +423,27 @@ export default function Home() {
 
           <div className="flex flex-row justify-between w-[80%] sm:w-[50%]">
             <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
-              <a href="https://web.facebook.com/Glimere" target="_blank">
+              <a href="https://web.facebook.com/Glimere" target="_blank" rel="noreferrer">
                 <img src={facebook} alt="" className='w-[45px]' />
               </a>
             </div>
             <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
-              <a href="https://twitter.com/glmere" target="_blank">
+              <a href="https://twitter.com/glmere" target="_blank" rel="noreferrer">
                 <img src={twitter} alt="" className='w-[45px]' />
               </a>
             </div>
             <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
-              <a href="https://www.instagram.com/glimereofficial/" target="_blank">
+              <a href="https://www.instagram.com/glimereofficial/" target="_blank" rel="noreferrer">
                 <img src={instagram} alt="" className='w-[45px]' />
               </a>
             </div>
             <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
-              <a href="https://www.linkedin.com/company/glimere/" target="_blank">
+              <a href="https://www.linkedin.com/company/glimere/" target="_blank" rel="noreferrer">
                 <img src={linkedin} alt="" className='w-[45px]' />
               </a>
             </div>
             <div className='flex justify-center items-center cursor-pointer hover:bg-[#ca9728] duration-150 rounded-full'>
-              <a href="https://www.youtube.com/channel/UCeJZsLwqBttjiaPdtoNnh6g" target="_blank">
+              <a href="https://www.youtube.com/channel/UCeJZsLwqBttjiaPdtoNnh6g" target="_blank" rel="noreferrer">
                 <img src={youtube} alt="" className='w-[45px]' />
               </a>
             </div>
@@ -535,7 +498,7 @@ export default function Home() {
                           <input type="hidden" name="form-name" value="contact" />
 
                           <div className="border-b border-gray-900/10 pb-4">
-                            <h2 className="text-[40px] font-semibold  text-[#9d5c0d]" style={{ fontFamily: "Edensor" }}>Get Early Access to Glimere's Exclusive App!</h2>
+                            <h2 className="text-[40px] font-semibold  text-[#9d5c0d]" style={{ fontFamily: "Edensor" }}>Get Early Access to Glimere&rsquo;s Exclusive App!</h2>
                             <p className="mt-8 text-sm leading-6 text-gray-600">Thank you for your interest in Glimere! Your details will be used to inform you of our epic launch.</p>
 
                             <div className="mt-[20px] ">
@@ -573,8 +536,8 @@ export default function Home() {
 
 
                               <div className='relative mb-4'>
-                                <legend class="text-sm leading-6 text-gray-600">What best describes your fashion role or interests?</legend>
-                                <select id="fashionClass" name="fashionClass" multiple class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-[#f7a477] focus:outline-none focus:ring-[#ed7534] focus:border-[#ed7534] sm:text-sm rounded-md">
+                                <legend className="text-sm leading-6 text-gray-600">What best describes your fashion role or interests?</legend>
+                                <select id="fashionClass" name="fashionClass" multiple className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-[#f7a477] focus:outline-none focus:ring-[#ed7534] focus:border-[#ed7534] sm:text-sm rounded-md">
                                   <option value="" disabled selected>Select your fashion class...</option>
                                   <option value="Fashionista" className='checked:bg-[#ffb590] checked:text-white'>Fashionista</option>
                                   <option value="Fashion Blogger/Influencer" className='checked:bg-[#ffb590] checked:text-white'>Fashion Blogger/Influencer</option>
@@ -603,7 +566,7 @@ export default function Home() {
 
 
                               <fieldset>
-                                <legend className='text-sm leading-6 text-gray-600'>Will you be interested in Glimere's beta testing</legend>
+                                <legend className='text-sm leading-6 text-gray-600'>Will you be interested in Glimeres beta testing</legend>
                                 <p>
                                   <label>
                                     <input type="radio" name="beta" id='beta' value="Yes" className='text-[#ed7534] checked:text-[#ed7534] focus:ring-2 focus:ring-transparent after:text-[#ed7534]' /> Yes
@@ -619,7 +582,7 @@ export default function Home() {
                             </div>
                           </div>
                           <div className="mt-6 flex items-center justify-center gap-x-6">
-                            <button type="submit" className="rounded-md bg-[#ed7534] px-24 py-2 text-sm font-semibold text-white shadow-sm duration-150 hover:bg-[#9d5c0d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">I'm in!</button>
+                            <button type="submit" className="rounded-md bg-[#ed7534] px-24 py-2 text-sm font-semibold text-white shadow-sm duration-150 hover:bg-[#9d5c0d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">I&rsquo;m in!</button>
                           </div>
                         </form>}
 
