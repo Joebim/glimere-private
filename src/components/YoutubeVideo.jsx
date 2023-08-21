@@ -24,4 +24,4 @@ export default function YoutubeVideo(props) {
       <YouTube videoId="rUMqcJ2FW0c" opts={opts} onReady={onReady} />
     </div>
   );
-};
+}
