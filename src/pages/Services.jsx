@@ -167,7 +167,7 @@ export default function Services() {
 
 
 
-        <div className="h-[500px] w-[500px] bg-[#fff5ee] overflow-hidden rounded-[100px] bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
+        <div className=" w-[500px] bg-[#fff5ee] overflow-hidden rounded-[100px] bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
           <img src={landingImg} alt="" className='hidden sm:block px-[10px] pt-[10px] sm:px-[30px] sm:pt-[30px]' />
         </div>
 
