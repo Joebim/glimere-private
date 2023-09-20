@@ -155,19 +155,19 @@ export default function Services() {
 
         <div className="flex-[1] h-full flex flex-col justify-center">
           <div className="w-[90%] mb-[15px]">
-            <h1 className="text-[40px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold mb-[40px]" style={{ fontFamily: "Edensor" }}>Shop African fashion faster and better.</h1>
+            <h1 className="text-[35px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold mb-[40px]" style={{ fontFamily: "Edensor" }}>Shop African fashion faster and better.</h1>
           </div>
           {/* <div className="w-[80%] mb-[15px]">
             <h1 className="text-[20px] sm:text-[30px] text-left text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Connect, Create, and Empower</h1>
             </div> */}
-          <div className="w-[70%] ">
+          <div className="w-[80%] ">
             <h1 className="text-[15px] text-left text-[#9d5c0d]"> Say goodbye to long hours of searching for the perfect African fashion pieces. Glimere curates a dazzling array of authentic, handcrafted fashion items from talented creators across the continent.</h1>
           </div>
         </div>
 
 
 
-        <div className=" w-[500px] bg-[#fff5ee] overflow-hidden rounded-[100px] bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
+        <div className="sm:h-auto h-[500px] w-[500px] bg-[#fff5ee] overflow-hidden rounded-[100px] bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
           <img src={landingImg} alt="" className='hidden sm:block px-[10px] pt-[10px] sm:px-[30px] sm:pt-[30px]' />
         </div>
 
