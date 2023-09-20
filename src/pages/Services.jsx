@@ -43,40 +43,40 @@ export default function Services() {
   const onReady = (event) => {
     playref.current = event.target;
   }
-  // Set the date you're counting down to
-  const countDownDate = new Date("August 25, 2023 00:00:00").getTime();
+  // // Set the date you're counting down to
+  // const countDownDate = new Date("August 25, 2023 00:00:00").getTime();
 
-  // Update the countdown every 1 second
-  const countdownInterval = setInterval(function () {
-    // Get today's date and time
-    const now = new Date().getTime();
+  // // Update the countdown every 1 second
+  // const countdownInterval = setInterval(function () {
+  //   // Get today's date and time
+  //   const now = new Date().getTime();
 
-    // Find the distance between now and the count down date
-    const distance = countDownDate - now;
+  //   // Find the distance between now and the count down date
+  //   const distance = countDownDate - now;
 
-    // Calculate the days, hours, minutes and seconds remaining
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  //   // Calculate the days, hours, minutes and seconds remaining
+  //   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  //   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  //   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // Update the HTML with the new values
-    document.getElementById("days").style.setProperty("--value", days);
-    document.getElementById("hours").style.setProperty("--value", hours);
-    document.getElementById("mins").style.setProperty("--value", minutes);
-    document.getElementById("secs").style.setProperty("--value", seconds);
+  //   // Update the HTML with the new values
+  //   document.getElementById("days").style.setProperty("--value", days);
+  //   document.getElementById("hours").style.setProperty("--value", hours);
+  //   document.getElementById("mins").style.setProperty("--value", minutes);
+  //   document.getElementById("secs").style.setProperty("--value", seconds);
 
-    // Update the text with the new values
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-    document.getElementById("mins").textContent = minutes;
-    document.getElementById("secs").textContent = seconds;
+  //   // Update the text with the new values
+  //   document.getElementById("days").textContent = days;
+  //   document.getElementById("hours").textContent = hours;
+  //   document.getElementById("mins").textContent = minutes;
+  //   document.getElementById("secs").textContent = seconds;
 
-    // If the countdown is finished, clear the interval
-    if (distance < 0) {
-      clearInterval(countdownInterval);
-    }
-  }, 1000);
+  //   // If the countdown is finished, clear the interval
+  //   if (distance < 0) {
+  //     clearInterval(countdownInterval);
+  //   }
+  // }, 1000);
 
   const elementRef = useRef(null);
 
@@ -151,23 +151,23 @@ export default function Services() {
   return (
     <>
 
-      <div className='h-[100vh] bg-[#ffe9b8]  w-full px-[40px] sm:px-[4rem] pt-[80px] relative flex flex-row items-center'>
+      <div className='h-[100vh] bg-[#ffe9b8]  w-full px-[40px] sm:px-[4rem] pt-[80px] pb-[30px] relative flex flex-row items-center'>
 
         <div className="flex-[1] h-full flex flex-col justify-center">
           <div className="w-[90%] mb-[15px]">
-            <h1 className="text-[40px] sm:text-[60px] text-left text-[#9d5c0d] font-semibold mb-[40px]" style={{ fontFamily: "Edensor" }}>Connect. Create. Empower.</h1>
+            <h1 className="text-[40px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold mb-[40px]" style={{ fontFamily: "Edensor" }}>Shop African fashion faster and better.</h1>
           </div>
           {/* <div className="w-[80%] mb-[15px]">
             <h1 className="text-[20px] sm:text-[30px] text-left text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Connect, Create, and Empower</h1>
             </div> */}
           <div className="w-[70%] ">
-            <h1 className="text-[15px] text-left text-[#9d5c0d]">Empower your fashion dreams with Glimere&rsquo;s platform, connecting you with like-minded individuals, creating stunning portfolios, and providing endless opportunities for growth and success - all in one place.</h1>
+            <h1 className="text-[15px] text-left text-[#9d5c0d]"> Say goodbye to long hours of searching for the perfect African fashion pieces. Glimere curates a dazzling array of authentic, handcrafted fashion items from talented creators across the continent.</h1>
           </div>
         </div>
 
 
 
-        <div className="h-[500px] w-[500px] bg-[#fff5ee] overflow-hidden rounded-full bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
+        <div className="h-[500px] w-[500px] bg-[#fff5ee] overflow-hidden rounded-[100px] bg-landingImg sm:bg-none bg-cover flex flex-col justify-end flex-[0.5] sm:flex-[1]">
           <img src={landingImg} alt="" className='hidden sm:block px-[10px] pt-[10px] sm:px-[30px] sm:pt-[30px]' />
         </div>
 
@@ -333,10 +333,10 @@ export default function Services() {
       <div ref={playref} className="container bg-[#ffe9b8] max-w-full flex justify-center items-center">
         {/* Other content */}
         <div className="hidden sm:block my-[70px]">
-          <YoutubeVideo onReady={onReady}/>
+          <YoutubeVideo onReady={onReady} />
         </div>
         <div className="block sm:hidden my-[70px]">
-          <YoutubeVideoSmall onReady={onReady}/>
+          <YoutubeVideoSmall onReady={onReady} />
         </div>
         {/* Other content */}
       </div>
@@ -358,7 +358,7 @@ export default function Services() {
 
           </div>
         </div>
-        <div className="flex-[0.6] sm:flex-[1] flex justify-center items-center">
+        {/* <div className="flex-[0.6] sm:flex-[1] flex justify-center items-center">
 
           <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
             <div className="flex flex-col h-[100px] sm:h-[120px] w-[60px] sm:w-[90px] rounded-[15px] bg-[#ed7534] text-white p-2 bg-neutral rounded-box text-neutral-content">
@@ -391,7 +391,7 @@ export default function Services() {
             </div>
           </div>
 
-        </div>
+        </div> */}
       </div>
 
       <div className="bg-[#4e2012] w-full h-[700px] sm:h-[400px] flex flex-col-reverse sm:flex-row pt-0">
