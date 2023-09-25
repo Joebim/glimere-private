@@ -28,7 +28,7 @@ import YoutubeVideo from '../components/YoutubeVideo';
 import YoutubeVideoSmall from '../components/YoutubeVideoSmall';
 
 
-export default function Services() {
+export default function Landing() {
 
   const [open, setOpen] = useState(false)
   const [formState, setFormState] = useState({ name: "", email: "" });
@@ -43,40 +43,6 @@ export default function Services() {
   const onReady = (event) => {
     playref.current = event.target;
   }
-  // // Set the date you're counting down to
-  // const countDownDate = new Date("August 25, 2023 00:00:00").getTime();
-
-  // // Update the countdown every 1 second
-  // const countdownInterval = setInterval(function () {
-  //   // Get today's date and time
-  //   const now = new Date().getTime();
-
-  //   // Find the distance between now and the count down date
-  //   const distance = countDownDate - now;
-
-  //   // Calculate the days, hours, minutes and seconds remaining
-  //   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  //   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  //   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  //   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  //   // Update the HTML with the new values
-  //   document.getElementById("days").style.setProperty("--value", days);
-  //   document.getElementById("hours").style.setProperty("--value", hours);
-  //   document.getElementById("mins").style.setProperty("--value", minutes);
-  //   document.getElementById("secs").style.setProperty("--value", seconds);
-
-  //   // Update the text with the new values
-  //   document.getElementById("days").textContent = days;
-  //   document.getElementById("hours").textContent = hours;
-  //   document.getElementById("mins").textContent = minutes;
-  //   document.getElementById("secs").textContent = seconds;
-
-  //   // If the countdown is finished, clear the interval
-  //   if (distance < 0) {
-  //     clearInterval(countdownInterval);
-  //   }
-  // }, 1000);
 
   const elementRef = useRef(null);
 
@@ -85,45 +51,9 @@ export default function Services() {
   };
 
 
-  // const scene = new THREE.Scene();
-  // const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-  // const renderer = new THREE.WebGLRenderer();
-  // renderer.setSize( window.innerWidth, window.innerHeight );
-  // const canvasRef = useRef(null);
-
-  // useEffect(() => {
-  //   const canvas = canvasRef.current;
-  //   canvas.appendChild(renderer.domElement);
-
-  //   const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-  //   const material = new THREE.MeshBasicMaterial( { color: 0xffe9b8 } );
-  //   const cube = new THREE.Mesh( geometry, material );
-  //   scene.add( cube );
-
-  //   camera.position.z = 5;
-
-  //   const animate = () => {
-  //     requestAnimationFrame( animate );
-
-  //     cube.rotation.x += 0.01;
-  //     cube.rotation.y += 0.01;
-
-  //     renderer.setClearColor(0x772f1a);
-  //     renderer.render( scene, camera );
-  //   }
-
-  //   animate();
-  // }, []);
-
-  // function validateEmail(email) {
-  //   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //   return re.test(email);
-  // }
 
   useEffect(() => {
     setSubmitted(false)
-    // setFormState({ name: "", email: ""});
   }, [open])
 
 
@@ -131,16 +61,6 @@ export default function Services() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // fetch("https://glimere.com/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: encode({ "form-name": "contact", ...formState }),
-    // })
-    //   .then(() => console.log("Success!"))
-    //   .catch((error) => console.log(error));
-
-    // console.log('formState', formState)s
     setSubmitted(true)
   };
 
@@ -151,18 +71,22 @@ export default function Services() {
   return (
     <>
 
-      <div className='h-[100vh] bg-[#ffe9b8]  w-full px-[40px] sm:px-[4rem] pt-[80px] pb-[30px] relative flex flex-row items-center'>
+      <div className='h-[100vh] bg-[#ffe9b8]  w-full px-[40px] sm:px-[200px] pt-[80px] pb-[30px] relative flex flex-row items-center'>
 
         <div className="flex-[1] h-full flex flex-col justify-center">
           <div className="w-[90%] mb-[15px]">
-            <h1 className="text-[35px] sm:text-[50px] text-left text-[#9d5c0d] font-semibold mb-[40px]" style={{ fontFamily: "Edensor" }}>Shop African fashion faster and better.</h1>
+            <h1 className="text-[28px] sm:text-[50px] text-left text-[#9d5c0d] mb-[20px]" style={{ fontFamily: "Edensor" }}>Shop African-made fashion faster and better.</h1>
           </div>
-          {/* <div className="w-[80%] mb-[15px]">
-            <h1 className="text-[20px] sm:text-[30px] text-left text-[#9d5c0d]" style={{fontFamily: "Edensor"}}>Connect, Create, and Empower</h1>
-            </div> */}
+
           <div className="w-[80%] ">
-            <h1 className="text-[15px] text-left text-[#9d5c0d]"> Say goodbye to long hours of searching for the perfect African fashion pieces. Glimere curates a dazzling array of authentic, handcrafted fashion items from talented creators across the continent.</h1>
+            <h1 className="text-[15px] sm:text-[18px] text-left text-[#9d5c0d] font-normal"> Say goodbye to long hours of searching for the perfect African fashion pieces. Glimere curates a dazzling array of authentic, handcrafted fashion items from talented creators across the continent.</h1>
           </div>
+          <div className="">
+            <button className="text-white bg-[#ED7534] md:py-2.5 py-3.5 px-[25px] rounded-[10px] font-bold mt-[20px]">
+              Get Started
+            </button>
+          </div>
+
         </div>
 
 
@@ -185,7 +109,6 @@ export default function Services() {
             <p className="text-[#613e13]">Discover the fashion potential within you and let it shine</p>
           </div>
         </div>
-        {/* <div className='absolute top-0 left-0 w-full h-full' ref={canvasRef} /> */}
         <div className="flex-[1] z-10 flex flex-col items-end justify-end py-[60px] sm:py-[80px] pr-[40px] sm:pr-[4rem]">
           <h1 className="text-white font-semibold text-[35px] sm:text-[40px]" style={{ fontFamily: "Edensor" }}>Express Yourself</h1>
           <div className="w-[70%] sm:w-[40%] mt-[20px] text-right">
@@ -209,10 +132,8 @@ export default function Services() {
           </div>
           <div className="flex-[1] h-[30%] flex flex-row">
             <div className="w-full h-full bg-[#585123] flex-[1]  rounded-tl-[150px] relative overflow-hidden">
-              {/* <img src={career2} alt="" className="w-[500px] absolute" /> */}
             </div>
             <div className="w-full h-full bg-[#fdff92] flex-[1] rounded-tr-[150px] overflow-hidden">
-              {/* <img src={career3} alt="" className="w-full" /> */}
             </div>
             <div className="w-full h-full bg-white flex-[1] rounded-bl-[150px]  rounded-br-[150px] rounded-tr-[150px] rounded-tl-[150px] overflow-hidden">
               <img src={career4} alt="" className="w-full" />
@@ -226,7 +147,6 @@ export default function Services() {
               <img src={career9} alt="" className="w-full" />
             </div>
             <div className="w-full h-full bg-[#EEC170] flex-[1]  rounded-br-[150px] overflow-hidden">
-              {/* <img src={career7} alt="" className="w-full" /> */}
             </div>
           </div>
 
@@ -321,7 +241,6 @@ export default function Services() {
 
         </div>
 
-        {/* <div className='absolute top-0 left-0 w-full h-full' ref={canvasRef} /> */}
         <div className="flex-[1] z-10 flex flex-col text-left sm:text-right items-start sm:items-end justify-start sm:justify-end py-[0px] sm:py-[80px] px-[40px] sm:pr-[4rem]">
           <h1 className="text-[#ffe9b8] font-semibold text-[35px] sm:text-[40px]" style={{ fontFamily: "Edensor" }}>Get the fashion feel</h1>
           <div className="w-[90%] sm:w-[60%] mt-[20px] text-left sm:text-right">
@@ -358,40 +277,7 @@ export default function Services() {
 
           </div>
         </div>
-        {/* <div className="flex-[0.6] sm:flex-[1] flex justify-center items-center">
 
-          <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
-            <div className="flex flex-col h-[100px] sm:h-[120px] w-[60px] sm:w-[90px] rounded-[15px] bg-[#ed7534] text-white p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown flex-[1] text-white font-mono text-[35px] sm:text-5xl relative">
-                <span id="days" style={{ "--value": 15 }}></span>
-              </span>
-              <h1 className="20px flex-[1]">days</h1>
-
-            </div>
-            <div className="flex flex-col h-[100px] sm:h-[120px] w-[60px] sm:w-[90px] rounded-[15px] bg-[#ed7534] text-white p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown flex-[1] text-white font-mono text-[35px] sm:text-5xl relative">
-                <span id="hours" style={{ "--value": 10 }}></span>
-              </span>
-              <h1 className="20px flex-[1]">hours</h1>
-
-            </div>
-            <div className="flex flex-col h-[100px] sm:h-[120px] w-[60px] sm:w-[90px] rounded-[15px] bg-[#ed7534] text-white p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown flex-[1] text-white font-mono text-[35px] sm:text-5xl relative">
-                <span id="mins" style={{ "--value": 24 }}></span>
-              </span>
-              <h1 className="20px flex-[1]">min</h1>
-
-            </div>
-            <div className="flex flex-col h-[100px] sm:h-[120px] w-[60px] sm:w-[90px] rounded-[15px] bg-[#ed7534] text-white p-2 bg-neutral rounded-box text-neutral-content">
-              <span className="countdown flex-[1] text-white font-mono text-[35px] sm:text-5xl relative">
-                <span id="secs" style={{ "--value": 22 }}></span>
-              </span>
-              <h1 className="20px flex-[1]">sec</h1>
-
-            </div>
-          </div>
-
-        </div> */}
       </div>
 
       <div className="bg-[#4e2012] w-full h-[700px] sm:h-[400px] flex flex-col-reverse sm:flex-row pt-0">
@@ -413,10 +299,7 @@ export default function Services() {
 
           <div className="pb-[40px]">
             <h3 className="text-[#945643] text-[45px] sm:text-[50px] font-semibold" style={{ fontFamily: "Edensor" }}>Let&rsquo;s Get social!</h3>
-            {/* <div className="flex flex-row items-center mb-[18px]">
-                  <div className="h-[1px] w-[40%] bg-[#ffe9b8]"></div>
-                  <div className="h-[10px] w-[10px] bg-[#ffe9b8] rounded-full"></div>
-                </div> */}
+
           </div>
 
 
@@ -491,7 +374,6 @@ export default function Services() {
                           </div>
                         </div>
                         : <form
-                          // onSubmit={handleSubmit} 
 
                           name="contact" action='/contact' method="POST">
                           <input type="hidden" name="form-name" value="contact" />
@@ -517,7 +399,6 @@ export default function Services() {
                                   <input required id="email" name="email" placeholder='Email'
                                     // value={formState.email} 
                                     type="email" autoComplete="email" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
-                                  // onChange={handleChange}
                                   ></input>
                                 </div>
                               </div>
@@ -525,9 +406,7 @@ export default function Services() {
                               <div className="sm:col-span-4 mb-4">
                                 <div className="mt-2">
                                   <input required id="country" name="country" placeholder='Country'
-                                    // value={formState.email} 
                                     type="text" autoComplete="country" className="block w-full rounded-md border-0 py-1.5 px-4 text-gray-900 shadow-sm  ring-gray-300 placeholder:text-gray-400 ring-[1px] focus:ring-[#9d5c0d] sm:text-sm sm:leading-6"
-                                  // onChange={handleChange}
                                   ></input>
                                 </div>
                               </div>

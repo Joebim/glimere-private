@@ -4,7 +4,7 @@ import { Routes } from 'react-router'
 import { Route } from 'react-router'
 import FontLoad from './global-components/Fontload'
 import Navbar from './global-components/Navbar'
-import Services from './pages/Services'
+import Landing from './pages/Landing'
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
 
     <Routes>
       {/* <Route path='/' element={<Home />} /> */}
-      <Route path='/' element={<Services />} />
+      <Route path='/' element={<Landing />} />
     </Routes>
     </>
     

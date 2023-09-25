@@ -29,12 +29,12 @@ export default function Navbar() {
 
   return (
     <nav className="absolute w-full px-[40px] sm:p-0">
-      <div className="container mx-auto max-w-[1344px] bg-[#FFE9B8]">
-        <div className="h-16 md:h-20 p-5 md:py-6 lg:px-5 flex items-center justify-between z-20 bg-[#FFE9B8]  relative">
+      <div className="container mx-auto max-w-[1344px]">
+        <div className="h-16 md:h-20 p-5 md:py-6 lg:px-[50px] flex items-center justify-between z-20 relative">
           {/* Icon */}
           <div className="flex flex-row items-center">
-            <GlimereLogo style={{ color: "#ed7534" }} height="35" className={`w-[40px] block sm:hidden`} />
-            <GlimereSweet style={{ color: "#ed7534" }} height="35" className={`w-[120px] hidden sm:block`} />
+            <GlimereLogo style={{ color: "#ed7534" }} height="35" className={`h-[40px] block`} />
+            {/* <GlimereSweet style={{ color: "#ed7534" }} height="35" className={`w-[120px] hidden sm:block`} /> */}
           </div>
 
 
@@ -50,16 +50,7 @@ export default function Navbar() {
           </div>
 
           {/* Menu */}
-          <div className="hidden md:flex items-center md:gap-4 lg:gap-8 text-black-200 text-sm lg:text-base font-body">
-            <a href="#" className="navlink active-navlink">
-              Product
-            </a>
-            <a href="#" className="navlink">
-              Solutions
-            </a>
-            <a className="navlink">Contact</a>
-
-          </div>
+          
 
           {/* Button */}
           <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
@@ -67,7 +58,7 @@ export default function Navbar() {
               <p className="text-black-100 underline cursor-pointer">Login</p>
             </a>
             <a href="#">
-              <button className="text-white bg-[#ED7534] md:py-2.5 px-4 py-3.5 px-[25px]">
+              <button className="text-white bg-[#ED7534] md:py-2.5 py-3.5 px-[25px] rounded-[10px]">
                 Sell on Glimere
               </button>
             </a>

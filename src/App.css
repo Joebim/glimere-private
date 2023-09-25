@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   scroll-behavior: smooth;
-}
+  font-family: 'League Spartan', sans-serif;}
 
 .logo {
   height: 6em;
@@ -12,6 +14,7 @@ body {
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -20,6 +23,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -53,8 +57,8 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #fdb38b;
   border-radius: 5px;
-  -webkit-animation: scroll 3s ;
-  animation: scroll 3s ;
+  -webkit-animation: scroll 3s;
+  animation: scroll 3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
