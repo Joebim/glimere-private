@@ -28,9 +28,9 @@ export default function Navbar() {
   }, [scrollPos]);
 
   return (
-    <nav className="absolute w-full px-[40px] sm:p-0">
+    <nav className="absolute w-full h-[80px] px-[40px] sm:p-0 flex items-center">
       <div className="container mx-auto max-w-[1344px]">
-        <div className="h-16 md:h-20 p-5 md:py-6 lg:px-[50px] flex items-center justify-between z-20 relative">
+        <div className="h-16 md:h-20 md:py-6 lg:px-[50px] flex items-center justify-between z-20 relative">
           {/* Icon */}
           <div className="flex flex-row items-center">
             <GlimereLogo style={{ color: "#ed7534" }} height="35" className={`h-[40px] block`} />
